@@ -1,0 +1,8 @@
+Hangman Project:
+For loops
+While loops
+If/Else
+Lists
+Strings
+Range
+Modules
