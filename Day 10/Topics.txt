@@ -1,0 +1,5 @@
+Functions with outputs
+Docstrings
+While loops
+Flags
+Recursion
