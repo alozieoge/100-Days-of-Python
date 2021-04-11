@@ -26,14 +26,17 @@
 #Hint 3: Download and read this flow chart I've created: 
 #   https://drive.google.com/uc?export=download&id=1rDkiHCrhaf9eX7u7yjM1qwSuyEk-rPnt
 
-#Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
-#11 is the Ace.
-#cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+#Flow chart available at:
+# https://drive.google.com/drive/u/1/folders/1PJbkc4DttNZ0BG_Rol0a5tt7gAaGLDWD
 
 import random
 from replit import clear
 from art import logo
 
+#Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
+#11 is the Ace.
+#cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 def deal_card():
     """
     Returns a random card from the deck.
