@@ -55,10 +55,10 @@ def calculator():
 
         print(f"{num1} {operation_symbol} {num2} = {answer}")
         
-        continue_calc = input(f"Type 'y' to continue calculating with {answer} or type 'n' to start a new calculation or 'q' to quit: ").lower()
+        continue_calc = input(f"Type 'y' to continue calculating with {answer} or type 'n' to start a new calculation or any other letter to quit: ").lower()
         if continue_calc == 'y':
-            num1 = answer
             # next_calculation = True
+            num1 = answer
         elif continue_calc == 'n':
             next_calculation = False
             calculator()
