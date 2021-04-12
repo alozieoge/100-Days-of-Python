@@ -5,6 +5,10 @@ EASY_TOTAL_TRIES = 10
 HARD_TOTAL_TRIES = 5
 
 def check_guess(guess, target):
+    """
+    Checks the guess against the target number. 
+    Returns a boolean depending on if it's a match.
+    """
     if guess < target:
         print("Too low.")
         return False
@@ -16,6 +20,9 @@ def check_guess(guess, target):
         return True
 
 def guessing_game():
+    """
+    Function implementing the number guessing game.
+    """
     print(logo)
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
