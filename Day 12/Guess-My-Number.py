@@ -1,6 +1,9 @@
 from art import logo
 import random
 
+EASY_TOTAL_TRIES = 10
+HARD_TOTAL_TRIES = 5
+
 def check_guess(guess, target):
     if guess < target:
         print("Too low.")
@@ -24,9 +27,9 @@ def guessing_game():
     level = input("Choose a difficulty: Type 'easy' or hard': ").lower()
 
     if level == "easy":
-        total_tries = 10
+        total_tries = EASY_TOTAL_TRIES
     else:
-        total_tries = 5
+        total_tries = HARD_TOTAL_TRIES
 
     guesses_left = total_tries
 
