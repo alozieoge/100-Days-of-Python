@@ -1,13 +1,25 @@
 Debugging
 
 Tips:
-1. Describe the problem
-2. Reproduce the bug
-3. Play computer
-4. Fix the error
-5. Print() is your friend
-6. Use a debugger
-7. Take a break
-8. Ask a friend
-9. Run your code often
-10. Ask StackOverflow
+
+1. Describe the problem: To understand what the issue is and test your assumptions to see what is true/false.
+
+2. Reproduce the bug: Modify the code to reproduce the bug everytime the code is run.
+
+3. Play computer: Step through each line of code, chceck the logic and see what it evaluates to.
+
+4. Fix the error: When the editor/console is hinting at an error, fix it immediately. From the console, copy the last line(s) of the error and search for a solution in Google.
+Somebugs don't return an error message. You have to build your problem-solving skills to be able to breakdown a problem and fix it.
+Build experience by solving other people's bugs.
+
+5. Print() is your friend: Print variables at intermediate steps.
+
+6. Use a debugger: Python Tutor, Thorny, any Python IDE ... Use a break-point to pause code execution and examine the variable values.
+
+7. Take a break: Change your immediate environment - Grab a coffee, take a walk, watch a movie, read a book, go to sleep.
+
+8. Ask a friend: They can see the problem with a different perspective and they won't have the same assumptions you made.
+
+9. Run your code often: Don't wait until the end to run your code but test each added feature.
+
+10. Ask StackOverflow: Search other people's questions and solutions. Last resort to ask for help.
