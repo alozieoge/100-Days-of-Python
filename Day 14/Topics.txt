@@ -18,4 +18,6 @@ Steps:
 
 5. Tackle the next task in the TODO list.
 
-6. Set a reminder in your calendar (1 week ahead) to redo/review any exercise that was difficult to complete.
+6. If you have to implement a complex logic, first sketch a truth table.
+
+7. Set a reminder in your calendar (1 week ahead) to redo/review any exercise that was difficult to complete.
