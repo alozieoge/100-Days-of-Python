@@ -1,0 +1,19 @@
+Project: Higher or Lower Game
+Chose who has the higher number of followers on Instagram between 2 random accounts in each round.
+
+Steps:
+
+0. Play the game multiple times to understand what's happening.
+
+1. Break down the complex problem into smaller problems to be tackled one-by-one.
+
+2. Make a TODO list and start with the easiest task.
+
+3. Turn the problem into comments in your code.
+
+4. Write code beneath the comments.
+ - Run the code
+ - Fix the code bugs
+ - Repeat until task is complete.
+
+5. Tackle the next task in the TODO list.
