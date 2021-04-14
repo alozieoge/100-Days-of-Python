@@ -17,3 +17,5 @@ Steps:
  - Repeat until task is complete.
 
 5. Tackle the next task in the TODO list.
+
+6. Set a reminder in your calendar (1 week ahead) to redo/review any exercise that was difficult to complete.
