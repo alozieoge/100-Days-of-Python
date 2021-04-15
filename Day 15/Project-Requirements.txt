@@ -1,0 +1,25 @@
+Project: Coffe Machine
+
+Features:
+1. Makes 3 hot flavours.
+2. Coin operated.
+3. Automatic dispenser.
+
+Requirements
+-1. Prompt user with menu.
+0. Turn off machine with the code word.
+1. print report on kow much resources are left.
+2. Check resources are sufficient against each recipe when a user orders a drink.
+3. Process coins: How many coins of each denomination is provided.
+4. Check transaction is successful. Calculate change if any.
+5. Make coffee if transaction is successful. Deduct resources consumed. Update money in till.
+
+Tips:
+1. Use #TODO to create a to-do list in Pycharm.
+2. To modify multiple lines simultaneously, hold 'Alt' + 'Shift' and drag down/up the mouse across the lines to modify.
+3. Use the 'global' keuword when using a global keyword in a local scope e.g. function.
+4. Windows magnifier: 'Win' + '+'
+5. Emojis: 'Win' + '.'
+6. Guideline on the right side of the editor helps you keep to the 120 character limit per line.
+7. Decorative double-quotes used in PDFs are different from programming double-quotes.
+8. Pycharm shows the conditional step-through to arrive at the current cursor location in the code, at the bottom of the editor window.
