@@ -1,0 +1,28 @@
+- Setup Local Development Environment
+
+- Project: Coffee machine
+
+
+Steps:
+1. Cownload & install Python v.3.8.x
+
+2. Download & install Pycharm - Community edition
+
+
+Pycharm features:
+1. English spell check for non-code words. 
+
+2. More space to develop / split screen.
+
+3. Built-in linter: Picks up bit of code that might not conform to the PEP8 style guide / convention.
+  - Use 4 spaces for indent instead of tabs.
+  - Limit your lines to 79 characters.
+  - 2 line space before and after function/class definitions.
+  
+4. View local coding history to see all your edits.
+  - Allows you to rollback / revert to previous versions - version control.
+  
+5. View structure of your code
+
+6. Refactor rename: Rename all instances of a function or variable.
+  
