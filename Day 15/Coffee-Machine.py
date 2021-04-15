@@ -79,6 +79,9 @@ def calculate_amount_paid(quarters, dimes, nickles, pennies):
 
 
 def calculate_menu_cost(drink):
+    """
+    Returns the cost of the drink.
+    """
     return MENU[drink]["cost"]
 
 
@@ -101,10 +104,16 @@ def check_transaction(drink, paid):
 
 
 def calculate_machine_money(paid, money):
+    """
+    Returns the total money in the machine after payment.
+    """
     return paid + money
 
 
 def calculate_change(paid, cost):
+    """
+    Returns the change after payment.
+    """
     print(f"Here is ${round(paid - cost, 2)} in change.")
 
 
