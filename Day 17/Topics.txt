@@ -16,4 +16,7 @@ Steps:
    - Check if answer is correct.
    - Check if end of quiz.
    
-4. 
+4. Tell the user the final score when the questions are finished.
+
+5. Get more questions and answers from the Open Trivia Database (OTB) API (https://opentdb.com/api_config.php).
+   - Generates questions and answers in JSON format (similar to Python dictionaries).
