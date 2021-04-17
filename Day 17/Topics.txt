@@ -4,3 +4,16 @@ Attributes
 Methods
 
 Project: Quiz Game
+
+Steps:
+1. Create a model for a Question class
+   - Attributes must be created when new Question object is initialized.
+
+2. Create a question bank of Question objects.
+
+3. Ask user to answer a question.
+   - Ask question.
+   - Check if answer is correct.
+   - Check if end of quiz.
+   
+4. 
