@@ -23,3 +23,8 @@
 - Project: Hirst Spot Painting
   1. Extract RGB values from the image with Colorgram.
   2. Draw the dots with Turtle.
+  
+- Project Requirements
+  1. 10 * 10 rows of spots
+  2. Dot size = 20
+  3. Dot spacing = 50
