@@ -1,0 +1,30 @@
+- Turtle graphics
+
+- Importing modules:
+  - Basic import
+  - from ... import ...
+  - from ... import *
+
+- Aliasing modules
+
+- Installing modules
+
+- Turtle Graphics Exercises:
+  1. Draw a square
+  2. Draw a dashed line
+  3. Draw different shapes from triangle to decagon
+  4. Draw a random walk
+  5. Generate random RGB colors
+  6. Make a spirograph
+
+
+- Tuples
+
+- Project: Hirst Spot Painting
+  1. Extract RGB values from the image with Colorgram.
+  2. Draw the dots with Turtle.
+  
+- Project Requirements
+  1. 10 * 10 rows of spots
+  2. Dot size = 20
+  3. Dot spacing = 50
