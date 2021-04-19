@@ -1,0 +1,21 @@
+- Turtle Graphics
+- Event Listeners
+- Higher Order Functions
+- Object State and Multiple Instances
+
+Exercise 1: Etch-A-Sketch
+
+Requirements:
+W = Forward
+S = Backward
+A = Counter-CLockwise
+D = Clockwise
+C = Clear Drawing
+
+
+Project: Build a Turtle Race
+1. User choses a color.
+2. Turtles start at left side of screen.
+3. Race commences. Turtles move randomly towards the right side.
+4. First turtle to reach the right edge is the winner.
+5. Close the screen and print report.
