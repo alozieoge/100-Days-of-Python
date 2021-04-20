@@ -1,0 +1,28 @@
+Build the Snake Game with Turtle Graphics and OOP
+
+Breakdown of Steps
+
+1. Create the snake body:
+   - Initial snake body comprises 3 squares.
+   
+2. Move the snake
+   Strategy: Make the snake segments move to the position of the segment in front, starting from the last segment. 
+   Then move the first segment forward.
+   - Use tracer(), update(), timer.sleep() to refresh turtle animation.
+
+3. Control the snake
+   - Snake should keep moving forward until any of the arrow keys - Up, Down, Left, Right - is pressed.
+   - Snake cannot reverse on itself.
+   - Use listen() and onkey() to listen for events and bind keys to certain methods. 
+
+4. Detect collision with food
+5. Create a scoreboard and update scores
+6. Detect collision with wall
+7. Detect collision with tail
+
+
+Classes to build for the game
+1. Snake
+2. Food
+3. Scoreboard
+
