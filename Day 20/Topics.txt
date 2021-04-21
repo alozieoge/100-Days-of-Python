@@ -16,13 +16,30 @@ Breakdown of Steps
    - Use listen() and onkey() to listen for events and bind keys to certain methods. 
 
 4. Detect collision with food
+   - Food is blue circle on screen.
+   - Snake collides with food within tolerance.
+   - Food moves to random location.
+   
 5. Create a scoreboard and update scores
+   - Scoreboard is a turtle, hence inherits from Turtle class.
+   - Use turtle.write() to write text on the screen.
+   
 6. Detect collision with wall
+   - Trigger the game over sequence when snake head is within the wall boundary.
+   - Wall boundery is chosen based on iterative testing.
+   
 7. Detect collision with tail
+   - Increase snake size when snake eats food.
+   - Trigger game over sequence when snake head collides with (is within a few pixels) any of the other snake segments.
+   
+8. Customize the snake game.
 
 
 Classes to build for the game
 1. Snake
 2. Food
 3. Scoreboard
+
+
+- List and tuple slicing
 
