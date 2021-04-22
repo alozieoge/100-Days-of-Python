@@ -37,4 +37,9 @@ Beakdown the Problem:
    - Reset ball position to centre of screen.
    - Ball starts moving in the opposite x-direction.
 
-8. Keep score
+8. Keep score and change the ball speed
+   - write() scoreboard at the top of the screen.
+   - Update score when ball misses paddle.
+   - Increase ball speed when ball hits paddle.
+   - Reset ball speed after a miss.
+   
