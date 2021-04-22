@@ -1,0 +1,45 @@
+Build a Pong game
+
+Beakdown the Problem:
+
+1. Create the screen
+   - Black screen.
+   - 800 x 600
+
+2. Create and move a paddle
+   - Paddle is a Turtle object (class inheritance).
+   - Width = 20
+   - Height = 100
+   - X position = 350
+   - Y position = 0
+   - Can move only up and down.
+   - 20 pixel pace.
+
+3. Create another paddle
+   - Move second paddle with 'w' and 's' keys.
+
+4. Create the ball and make it move
+   - Width = Height = 20
+   - X position = Y position = 0
+   - Ball is a turtle graphics object.
+   - Control screen animation to view the ball's motion.
+
+5. Detect collision with wall and bounce
+   - Ball bounces after collision with top and bottom walls only.
+   - Bouncing means change in the sign of y_step (dy).
+
+6. Detect collision with paddle
+   - Ball bounces after collision with paddles.
+   - Bouncing means change in the sign of x_step (dx).
+   
+7. Detect when paddle misses ball
+   - When ball crosses the wall boundary.
+   - Reset ball position to centre of screen.
+   - Ball starts moving in the opposite x-direction.
+
+8. Keep score and change the ball speed
+   - write() scoreboard at the top of the screen.
+   - Update score when ball misses paddle.
+   - Increase ball speed when ball hits paddle.
+   - Reset ball speed after a miss.
+   
