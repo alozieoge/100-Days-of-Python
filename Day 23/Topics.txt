@@ -1,0 +1,46 @@
+Capstone Project: Turtle Crossing
+
+Aim: Help the turtle cross the road without getting hit.
+
+
+Requirements:
+
+1. Turtle can only move up when player presses "Up" key.
+
+2. Cars are generated randomly on the y-axis.
+   - Move from right to left.
+   
+3. Turtle starts at the bottom and moves to the top edge of the screen.
+   - When turtle reaches top edge:
+     - Position reset
+     - Level up
+     - Cars speed up
+     
+4. When car hits turtle, display GAME OVER. Everything stops.
+
+
+Breakdown the Problem:
+
+1. Create the turtle player.
+   - Oriented north.
+   - Start at bottom of screen.
+   - Listen for "Up" key press to move forward (north).
+   
+2. Create cars.
+   - 20 x 40 pixels.
+   - Randomly generated along y-axis.
+   - No car in top and bottom pixels (safe lane).
+   - Move from right to left.
+   - Generate new car every 6th time loop runs.
+  
+3. Detect player collision with car
+   - Stop game.
+   
+4. Detect when turtle reaches top edge of screen.
+   - Return turtle to starting position
+   - Increase speed of cars
+   
+5. Create scoreboard.
+   - Keep track of player level.
+   - Increase player level after complete crossing.
+   - When car hits turtle, display GAME OVER!
