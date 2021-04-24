@@ -1,0 +1,14 @@
+- Working with local files and directories.
+
+- Update snake game to read/write highscores from/to a file.
+
+- Relative and absolute file paths.
+
+- Project: Mail-merge based on list of names.
+  - Create a custom invitation letter for each name in a list of names by replacing the placeholder.
+  
+Tips:
+- There is no right solution. There is only your solution.
+- Optimize your code for readability not complexity.
+- Make your code to be expressive, readable and understood by others and future you.
+  
