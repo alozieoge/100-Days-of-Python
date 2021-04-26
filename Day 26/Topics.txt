@@ -1,0 +1,9 @@
+- List and Dictionary Comprehension
+
+- Project: NATO Phonetic Alphabets 
+
+  Aim: Generate NATO phonetic alphabets for user name.
+  
+  TODO:
+  1. Create a dictionary from each {Alphabet : Code Name}.
+  2. Create a list of the phonetic code words from a word that the user inputs.
