@@ -1,0 +1,29 @@
+- Strong and Dynamic Typing
+
+- Project: Pomodoro App with Tkinter
+
+Steps:
+1. UI setup
+
+2. Add other widgets to the grid layout.
+   - Timer label
+   - Start button
+   - Reset button
+   - Check labels
+   
+3. Add a countdown mechanism.
+   - tkinter.Tk().after() method
+
+4. Add timer mechanism.
+   - Start countdown timer on button click.
+   - Set countdown time for different sessions - work, short break, long break.
+   - Call the start_timer() when countdown = 0 and increment the number of reps.
+   
+5. Add checkmarks for each work session.
+
+6. Reset the app.
+   - Define reset timer function.
+   - Reset all check marks.
+   - Reset countdownn timer text.
+   - Stop the timer
+   - Reset the title to 'Timer'.
