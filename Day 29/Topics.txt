@@ -1,0 +1,28 @@
+Project: Build a Local Password Manager
+
+Steps: 
+
+1. Create the GUI window with tkinter.Tk()
+
+2. Create the canvas to contain the logo
+   - Upload the image file to a PhotoImage() object.
+   - Create canvas with image.
+   
+3. Arrange the widget using the grid layout manager.
+
+4. Add functionality to save the password.
+   - Set the cursor to an entry widget with focus()
+   - Populate the email field using insert()
+   - Fetch the current entry field text using get()
+   - Persist the data to a local text file.
+   - Delete all entries in each field.
+   
+5. Create popup dialog box for user confirmation .
+
+6. Perform validation for empty entry fields.
+
+7. Implement the auto-password generator.
+   - Set button-click command.
+   - Use Password Generator code from Day 5.
+   
+8. Copy the password to clipboard using pyperclip.
