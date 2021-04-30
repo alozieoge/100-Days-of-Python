@@ -77,11 +77,12 @@ def find_password():
     else:
         website_dict = {key: value for key, value in data.items() if key == website}
         try:
+            website_email = website_dict[website]["email"]
             website_password = website_dict[website]["password"]
         except KeyError:
             messagebox.showerror("Error", "No details for the website exists")
         else:
-            messagebox.showinfo("Search", f"Website: {website} \nPassword: {website_password}")
+            messagebox.showinfo(title=website, message=f"Email: {website_email} \nPassword: {website_password}")
 
 
 def find_password_lab():
@@ -90,7 +91,6 @@ def find_password_lab():
     try:
         with open("data.json", "r") as data_file:
             data = json.load(data_file)
-            print(data)
     except FileNotFoundError:
         # Use exceptions to catch exceptional errors
         messagebox.showerror(title="Error", message="No Data File Found")
@@ -99,7 +99,7 @@ def find_password_lab():
         if website in data:
             email = data[website]["email"]
             password = data[website]["password"]
-            messagebox.showinfo(title=website, message=f"Website: {website} \nPassword: {password}")
+            messagebox.showinfo(title=website, message=f"Email: {email} \nPassword: {password}")
         else:
             messagebox.showerror(title="Error", message="No details for the website exists")
 
