@@ -5,7 +5,7 @@
   - IndexError
   - NameError
   
-- Exception Handling
+- Exception Handling: Use exceptions to catch exceptional error events. Use If/Else to handle expected or simple errors.
   - Try
   - Except
   - Else
