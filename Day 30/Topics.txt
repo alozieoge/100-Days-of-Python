@@ -1,0 +1,29 @@
+- Errors:
+  - FileNotFoundError
+  - TypeError
+  - KeyError
+  - IndexError
+  - NameError
+  
+- Exception Handling
+  - Try
+  - Except
+  - Else
+  - Finally
+  
+- Saving, Loading and Updating JSON data
+
+
+Project Update:
+1. Implement exception handling in the NATO phonetic alphabet app.
+
+2. Implement exception handling in the Password Manager GUI app.
+
+3. Add Save-to-File and Search feature to the Password Manager app.
+   - Add a 'Search' button next to the website entry field.
+   - Adjust the layout and other widgets as needed.
+   - Create a function find_password() that s triggered with the 'Search' button.
+   - Check if the user's text entry matches an item in the data.json.
+   - If yes, show a messagebox with the website's name and password.
+   - Catch an exception for when the data.json file does not exist: "No Data File Found"
+   - If the user's website does not exist, show a messagebox: "No details for the website exists".
