@@ -11,6 +11,9 @@
   - Else
   - Finally
   
+- Raise custom exceptions:
+  - raise *Error("...")
+  
 - Saving, Loading and Updating JSON data
 
 
