@@ -1,0 +1,22 @@
+Capstone Project: Flash Card Program
+
+Objective: To help with learning a new language (French)
+
+Steps:
+
+1. Creating the UI.
+   - Create a Tk() window object and configure its properties.
+   - Create a canvas object and add the card front-image and text.
+   - Create the wrong and right button objects and configure their properties.
+   - Place objects in a 2x2 grid.
+   
+2. Creating new flash cards.
+   - Read French/English words data from the CSV file.
+   - Convert DataFrame into a list of dictioneries.
+   - Randomly display next card when the ✔️ or ❌ button is clicked.
+   - Show first card on start-up.
+
+3. Flipping cards.
+   - 
+
+4. Saving progress.
