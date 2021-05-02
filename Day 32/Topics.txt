@@ -1,0 +1,15 @@
+- Email SMTP with smtplib (Simple Mail Transfer Protocol)
+
+- DateTime module
+
+- Execrise: Monday Motivational Quotes Email App
+  
+  Steps:
+  1. Use datetime modue to obtain the current day of the week (Monday).
+  2. Open the quotes file and obtain a list of quotes.
+  3. Pick a random quote from the list of quotes.
+  4. Use smtplib to send yourself a motivating email.
+     - Encode the message as UTF-8 not ASCII (default). 
+
+
+- Project: Automated Birthday Wisher
