@@ -1,0 +1,23 @@
+- Email SMTP with smtplib (Simple Mail Transfer Protocol)
+
+- DateTime module
+
+- Running your Python code in the Cloud using PythonAnywhere
+
+- Execrise: Monday Motivational Quotes Email App
+  
+  Steps:
+  1. Use datetime modue to obtain the current day of the week (Monday).
+  2. Open the quotes file and obtain a list of quotes.
+  3. Pick a random quote from the list of quotes.
+  4. Use smtplib to send yourself a motivating email.
+     - Encode the message as UTF-8 not ASCII (default). 
+
+
+- Project: Automated Birthday Wisher
+
+  Steps:
+  1. Update the birthday.csv with some birthday data.
+  2. Check if today's date matches a birthday from the file.
+  3. If true, pick a random letter from the templates and replace with the celebrant's name from the birthday list.
+  4. Send the updated letter to the celebrant's email address.
