@@ -17,6 +17,13 @@ Steps:
    - Show first card on start-up.
 
 3. Flipping cards.
-   - 
+   - After 3 seconds, flip the card. 
+   - Change the card background and text color.
+   - Show the English translation of the current word.
 
 4. Saving progress.
+   - If user clicks ✔️, remove the current word from the list of words.
+   - Save the new list of dictionary of words to a CSV file.
+   - Read from this new CSV file when loading the app.
+   - Write a try... except block to account for the first time loading the app.
+   - Set the index=False when writing the DataFrame of unlearned words to the CSV file.
