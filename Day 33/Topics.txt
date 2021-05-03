@@ -8,3 +8,13 @@ Steps:
 3. Parse the JSON to obtain the quote text.
 4. Display the quote in the canvas text widget.
 
+Project: Build an ISS Location Tracker
+
+Aim: A location tracker for the International Space Station (ISS) that sends an e-mail when the ISS is flying over Cranfield after sunset.
+
+Required Skills: API requests, DateTime, SMTP, JSON
+
+Steps:
+1. Check if my current position (latitude and longitude) is +/-5 degrees of the ISS location.
+2. Check if its night time.
+3. If 1. and 2. are True, send an email notification.
