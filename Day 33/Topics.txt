@@ -1,0 +1,10 @@
+Application Programming Interface (API) using requests.
+
+Challenge: Build a Kanye Quotes machine
+
+Steps:
+1. Make a get() request to the Kanye Rest API.
+2. Paise an exception if the request returned an unsuccessful status code.
+3. Parse the JSON to obtain the quote text.
+4. Display the quote in the canvas text widget.
+
