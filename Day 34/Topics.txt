@@ -1,0 +1,39 @@
+- The Trivia Database API
+
+- Unescaping HTML entities
+
+- Python Type Hints
+
+
+- Project: Build the GUI Quizzler App
+
+Steps:
+
+- From the Quiz App on Day 17:
+  1. Modify the 'data.py' which contains the local database of questions.
+  2. Make a get() request for 10 True/False questions.
+  3. Parse the JSON response and replace the 'question_data' variable.
+
+- Create the game UI as a class:
+  1. Code the tkinter GUI as a class in 'ui.py'.
+  2. Create and place the canvas widget.
+  3. Create an place the true and false buttons.
+  4. Create and place the score label.
+
+- Populate the UI canvas with API questions.
+  1. Output the API question from the 'quiz_brain.py'.
+  2. Read the question into the 'ui.py' to be displayed.
+  3. Use Python Typing to define the data type of the argument to the QuizInterface class initialization.
+
+- Check the Answer.
+  1. In the QuizInterface class, create methods to act as commands for each button.
+  2. Call the check_answer() method in the quiz_brain object and pass the user answer as a string - "True" or "False".
+  3. Print feedback to the console.
+
+- Give player feedback and keep score.
+  1. Canvas should flash GREEN if player is correct and flasf RED if player is wrong.
+  2. Use the tkinter method window.after(ms=, func=) to time the 1 second delay.
+  3. Canvas shows the next question after 1 second and restores background color.
+  4. Detect the end of the quiz questions.
+  5. Disable the buttons at the end of the quiz.
+  6. Update the canvas text with Game-Over message and score.
