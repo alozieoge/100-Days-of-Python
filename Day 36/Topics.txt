@@ -1,0 +1,21 @@
+Project: Stock News Monitoring App (DIY Bloomberg terminal).
+
+Skills:
+- API requests and authentication
+- SMS notification
+
+Steps:
+1. Pill in the day closing stock prices and % change for the stock of interest using the API.
+# TODO 1. - Get yesterday's closing stock price. Hint: You can perform list comprehensions on Python dictionaries. e.g. [new_value for (key, value) in dictionary.items()]
+# TODO 2. - Get the day before yesterday's closing stock price
+# TODO 3. - Find the positive difference between 1 and 2. e.g. 40 - 20 = -20, but the positive difference is 20. Hint: https://www.w3schools.com/python/ref_func_abs.asp
+# TODO 4. - Work out the percentage difference in price between closing price yesterday and closing price the day before yesterday.
+# TODO 5. - If TODO 4 percentage is greater than 5 then print("Get News").
+
+2. Fetch news about the stock company if % change in closing day stock price is greater than 5%.
+# TODO 6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
+# TODO 7. - Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
+
+3. Send SMS notification about the % change and relevant news.
+# TODO 8. - Create a new list of the first 3 article's headline and description using list comprehension.
+# TODO 9. - Send each article as a separate message via Twilio.
