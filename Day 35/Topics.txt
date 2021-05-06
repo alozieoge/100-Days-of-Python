@@ -2,7 +2,7 @@
 - Authentication
 - Sending SMS
 - Slice() function
-- Environment Variables
+- Environment Variables: Viewing and Exporting (Creating).
 
 Project: Build a Rain Alert program that sends an SMS to your phone at 7:00 a.m. each day if it will rain.
 
