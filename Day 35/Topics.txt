@@ -1,0 +1,23 @@
+- API Keys
+- Authentication
+- Sending SMS
+- Slice() function
+- Environment Variables
+
+Project: Build a Rain Alert program that sends an SMS to your phone at 7:00 a.m. each day if it will rain.
+
+Challenge 1: Get the 48-hour hourly weather forecast for your current location using OpenWeather API.
+- Use jsonviewer.stack.hu to view the json response data.
+
+Challenge 2: Print "Bring an unmbrella" if it will rain in the next 12 hours
+- It will rain / shower if the weather code < 700. 
+https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2
+
+Challenge 3: Send the rain alert to your mobile phone using the SMS service.
+- Using the Twilio API.
+
+Challenge 4: Host your code in the cloud using PythonAnywhere.
+- Use environment variables to specify your API and authentication keys.
+- Set code to run at UTC time corresponding to 7:00 local time.
+
+
