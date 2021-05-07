@@ -1,0 +1,32 @@
+- Advanced Authentication Methods using Headers
+
+- POST / PUT / DELETE Requests
+
+- datetime.strftime()
+
+Project: Build a Habit Tracker with the Pixela API.
+
+Steps:
+1. Create your user account and specify the required parameters using the HTTP POST. https://pixe.la/
+   - https://pixe.la/v1/users
+   
+2. Create a graph definition using HTTP POST request.
+   - https://pixe.la/v1/users/a-know/graphs
+   - Use HTTP header to provide your API authentication to keep your API key safe.
+   
+3. Get the graph.
+   - https://pixe.la/v1/users/<username>/graphs/<graphID>.html
+   
+4. Post data or pixels to the graph.
+   - https://pixe.la/v1/users/a-know/graphs/test-graph
+   
+5. (Refresh) View changes made to the graph.
+   - https://pixe.la/v1/users/<username>/graphs/<graphID>.html
+   
+6. Autofill the day's date using datetime.strftime()
+
+7. Update a pixel on a date using the HTTP PUT request.
+   - https://pixe.la/v1/users/<username>/graphs/<graphID>/<yyyyMMdd>
+   
+8. Delete a pixel for a date using the HTTP DELETE request.
+   - https://pixe.la/v1/users/<username>/graphs/<graphID>/<yyyyMMdd>
