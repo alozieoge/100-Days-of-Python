@@ -23,4 +23,7 @@ Steps:
    
 5. Use the Sheety API to POST a new row of workout data to the Workout Google sheet based on the exercise text input and response from Nutrtionix API request. 
    - https://sheety.co/docs/requests.html
+
+6. Define the API keys, API ID and authentication header items as environment variables.
+   - To define environment variables in PyCharm: https://stackoverflow.com/questions/42708389/how-to-set-environment-variables-in-pycharm
    
