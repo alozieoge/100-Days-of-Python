@@ -1,0 +1,26 @@
+Project: Build an Exercise Tracker with Python and Google Sheets
+
+Inspiration: OpenAI GPT-3 AI model for NLP.
+
+Skills Required:
+- APIs and HTTP POST requests
+- Python Datetime strftime()
+- API Authentiation with Headers
+- Environment Variables
+
+Steps:
+1. Create user account and get API credentials for Nutritionix API.
+   - https://developer.nutritionix.com/
+
+2. Use the "Nutritionix Natural Language for Exercise" API to print exercise statistics for a plain text input.
+   - https://trackapi.nutritionix.com/docs/#/default/post_v2_natural_exercise
+   - https://gist.github.com/mattsilv/d99cd145cc2d44d71fa5d15dd4829e03
+   
+3. Create / make a copy of the Google Sheet containing the workout data table.
+
+4. Setup your Google Sheet url with Sheety. Setup Sheety Authentication configuration.
+   - https://sheety.co/
+   
+5. Use the Sheety API to POST a new row of workout data to the Workout Google sheet based on the exercise text input and response from Nutrtionix API request. 
+   - https://sheety.co/docs/requests.html
+   
