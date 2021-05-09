@@ -1,0 +1,43 @@
+Capstone Project: BUild a Cheap Flight Tracker
+
+API:
+1. Sheety - Google Sheet Data Management API
+2. Kiwi Tequila - Flight Search API
+3. Twilio - SMS API
+
+Project Requirements:
+1. Make a copy of the 'Flight Deals' Google sheet.
+
+2. Populate the 'IATA Code' column in the Google sheet with the IATA airport/station code for each city.
+   - Flight Search + Sheety API
+   a. Use the Sheety API HTTP GET request to return all the row data in the Google sheet.
+   b. Pass everything stored in the "prices" key back to the main.py file and store it in a variable called sheet_data.
+   c. If the "iata Code" column of sheet_data is empty, pass each city name in sheet_data one-by-one to the FlightSearch class to get the corresponding IATA code for that city using the Flight Search API.
+   d. In the DataManager Class, make a HTTP PUT request and use the row id from sheet_data to update the Google Sheet with the IATA codes.
+   
+3. Check for the cheapest flight from tomorrow to 6 months later for the cities in Google sheet.
+   - Flight Search.
+   a. Search for the flight prices from London (LON) to all the destinations in the Google Sheet.
+   b. Look only for: 
+      - direct flights 
+      - leaving anytime between tomorrow ... (use strftime() to format the date to the required format by the Flight Search API) 
+      - and in 6 months (6x30days) time (use timedelta() from the datatime module to define a 6-month period)
+      - round trips 
+      - return between 7 and 28 days in length 
+      - currency of the price in GBP.
+   c. Print the City and Price for all the cities.
+   d. Use the FlightData class to represent the flight data. e.g. Create attributes for price, departure_airport_code, departure_city etc.
+   
+4. If the returned price < 'Lowest Price' column, send an SMS.
+   - Twilio
+   a. Check if any of the flights found are cheaper than the Lowest Price listed in the Google Sheet.
+   b. If so, use the Twilio API to send an SMS with enough information to book the flight. 
+   c. Use the NotificationManager for this job.
+   d. Message should Include:
+      - Price
+      - Departure City Name
+      - Departure Airport IATA Code
+      - Arrival City Name
+      - Arrival Airport IATA Code
+      - Outbound Date
+      - Inbound Date
