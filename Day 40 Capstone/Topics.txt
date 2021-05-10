@@ -1,0 +1,21 @@
+Capstone Project 2: Build a Flight Club with customer acquisition.
+
+Aim: Sign up users to your flight club and send them email notifications about the best flight deals daily.
+
+How it works:
+1. Direct users to the registration link (Replit).
+2. Request and validate user name and email address in a text-based input (Exceptions).
+3. Add user details to Google sheet (Sheety).
+4. Send them email notifications on best flight deals everyday (SMTP).
+
+Steps:
+1. Create customer acquisition platform. 
+   a. Create a new Repl.it project.
+   b. Create a new Sheet (Tab) in the Flight Deals Google Sheet and rename it to 'users'.
+   c. Add 3 new column headings - "First Name", "Last Name", "Email" to the 'users' Sheet.
+   d. In Sheety, refresh the Flight Deals project to view the new sheet.
+   e. Enable the POST method in the users endpoint.
+   f. Code up the Repl.it project to ask the user for their first name, last name and email. Get them to type their email twice for validation. If the two emails match, then tell them that they're in the club.
+   g. Use the Sheety API to POST the user details into the 'users' sheet in the Flight Deals Google Sheet.
+   
+2. 
