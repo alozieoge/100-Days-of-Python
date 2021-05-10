@@ -9,6 +9,7 @@ How it works:
 4. Send them email notifications on best flight deals everyday (SMTP).
 
 Steps:
+
 1. Create customer acquisition platform. 
    a. Create a new Repl.it project.
    b. Create a new Sheet (Tab) in the Flight Deals Google Sheet and rename it to 'users'.
@@ -18,4 +19,30 @@ Steps:
    f. Code up the Repl.it project to ask the user for their first name, last name and email. Get them to type their email twice for validation. If the two emails match, then tell them that they're in the club.
    g. Use the Sheety API to POST the user details into the 'users' sheet in the Flight Deals Google Sheet.
    
-2. 
+   
+2. Create a new project in Pycharm and copy the Flight Deal Finder code files from yesterday.
+
+
+3. Handle exceptions for destinations with no flights available from the Flight Search API.
+   a. Add a new destination entry in the 'prices' Google Sheet  - Bali, DPS, 501. Code will crash because there are no direct flights from London to Denpasar (Bali).
+      - To find historic flight prices: https://www.faredetective.com/farehistory/
+   b. Use try/except/else to catch the situations when the flight data is empty and let the code continue without crashing.
+      - If the flight data is empty, return an empty flight object (None) to main.py. 
+      - In main.py, use 'continue' to let the 'for' loop continue to run when flight is None.
+
+
+4. Make provision for non-direct flights if no direct flights are found. 
+   a. If a flight is not found, check to see if there are flights with 1 stop and pretty print the result with pprint().
+   b. Modify the FlightData class to add 2 optional init parameters with default values - stop_overs=0 and via_city="" 
+   c. Instead of the printing the result from (1.) above, create a flight object with stop_overs set to 1 and via_city as the name of stop over city.
+   d. Examine the data you printed in (1.) carefully to extract the information for origin_city, origin_airport, destination_city, destination_airport, out_date, and return_date .
+   e. Format the message to the NotificationManager in main.py to add the stop_over number and via_city, if a flight is found that requires a stop over.
+   
+   
+5. Notify our customers when there is a good deal.
+   a. Get all our customers in the users sheet from Google Sheets.
+   b. Use smtplib to send email message that contains the flight deal.
+   c. You can encode the message with UTF-8 to avoid UnicodeEncodeError.
+   d. Generate a Google Flight link with all the information pre-populated so that users can book the flights by clicking on the link in the email.
+      - e.g: https://www.google.co.uk/flights?hl=en#flt=STN.SXF.2020-08-25*SXF.STN.2020-09-08
+      - Send this URL along with the message when you email your customers.
