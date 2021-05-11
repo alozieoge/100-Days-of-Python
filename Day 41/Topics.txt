@@ -1,4 +1,7 @@
-Topic: Creating basic websites with HTML (HyperText Markup Language)
+Topic: Creating basic websites with HTML in Atom.
+https://github.com/nwinkler/atom-keyboard-shortcuts
+
+HTML = HyperText Markup Language
 
 - How does the internet work
 - How do websites work
