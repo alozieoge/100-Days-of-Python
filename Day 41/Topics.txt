@@ -1,0 +1,21 @@
+Topic: Creating basic websites with HTML (HyperText Markup Language)
+
+- How does the internet work
+- How do websites work
+  - HTML
+  - CSS
+  - Javascript
+- Introduction to HTML
+  - HTML Documentation:
+    - mdn
+    - w3schools
+    - devdocs.io
+  - HTML Tags
+    - Headings <h1></h1>
+    - Horizontal rule <hr>
+    - Line break <br>
+    - Paragraph <p></p>
+
+Project: Build a website with HTML
+
+Aim: Build a personal CV website with images, formaatting, hyperlinked webpages.
