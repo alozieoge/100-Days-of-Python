@@ -1,0 +1,22 @@
+Topic: Forms and Tables in HTML
+
+Outcome: 
+- Create contact forms and basic layout using tables in HTML
+- Host your personal CV website online with Github ;-)
+
+HTML Elements:
+- Tables and nested tables
+- Forms
+- Label
+- Input types
+  - Text
+  - Email
+  - Submit
+  - Password
+  - Color
+  - Date
+  - Range
+  - Checkbox
+  - Range
+  - File
+- TextArea
