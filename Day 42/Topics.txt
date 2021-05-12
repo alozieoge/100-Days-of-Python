@@ -2,7 +2,9 @@ Topic: Forms and Tables in HTML
 
 Outcome: 
 - Create contact forms and basic layout using tables in HTML
+
 - Host your personal CV website online with Github ;-)
+  https://alozieoge.github.io/cv/
 
 HTML Elements:
 - Tables and nested tables
