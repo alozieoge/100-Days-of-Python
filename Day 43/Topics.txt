@@ -1,0 +1,22 @@
+Introduction to CSS
+CSS - Cascading Style Sheets
+
+- Types of CSS
+  - Inline CSS: Inside the element tag opener <>
+  - Internal CSS: Inside a style element at the top of the file, inside the head tag content.
+  - External CSS: By linking to a style.css file accessible to all pages of the website.
+
+- Debugging CSS code
+
+- CSS syntax
+  - Selector {Property : Value;}
+
+- CSS Selectors
+  - A selector is a means of referring to elements to be styled in a CSS stylesheet.
+  1. Tag selector
+  2. Class selector
+  3. Id selector
+  
+  - Class selectors are preferred over Id selectors for element or group specific styling.
+  - Class selectors also allow mutiple styling to be applied to an element depending on the number iof its classes.
+  - Both Class and Id selectors will over-ride Tag selectors.
