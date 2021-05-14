@@ -1,0 +1,51 @@
+Project: Creating a Beautiful Personal Website with CSS
+
+- Favicons. https://favicon.cc
+- HTML Divs
+
+- CSS Box Model
+  - Width
+  - Height
+  - Padding
+  - Border
+  - Margin
+  
+- CSS Display Property
+  1. Block
+     - Paragraphs <p>
+     - Headings <h1> ... <h6>
+     - Divisions <div>
+     - Lists and List Items <ul>, <ol>, <li>
+     - Forms <form>
+    
+  2. Inline
+     - Span <span>
+     - Images <imag>
+     - Anchors <a>
+    
+  3. Inline-Block
+     - {display: inline-block;}
+    
+  4. None
+     - {display: none;}
+     
+  - The display property of an element can be modified in the CSS stylesheet.
+
+- HTML Display Rules
+  1. Content is everything. 
+     - The content determines the size of the element.
+  2. Order of element comes from HTML code.
+     - Elements are arranged in order of defintion in source code.
+  3. Children sit on parents (layers / z-index).
+     - Deepest nested elements are displayed top most.
+  
+- CSS Position Property
+  1. Static 
+     - Default HTML element positioning.
+  2. Relative
+     - Relative to the elements original / static position.
+     a. When an element is moved using its relative position, no other element position is affected.
+     b. In relative position, the coordinate values = margin values
+        {position: relative; top: 50px;} is the same as {margin-top: 50px;}
+  3. Absolute
+
