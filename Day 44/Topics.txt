@@ -10,7 +10,9 @@ Project: Creating a Beautiful Personal Website with CSS
   - Border
   - Margin
   
+  
 - CSS Display Property
+
   1. Block
      - Paragraphs <p>
      - Headings <h1> ... <h6>
@@ -31,21 +33,108 @@ Project: Creating a Beautiful Personal Website with CSS
      
   - The display property of an element can be modified in the CSS stylesheet.
 
+
 - HTML Display Rules
+
   1. Content is everything. 
      - The content determines the size of the element.
+     
   2. Order of element comes from HTML code.
      - Elements are arranged in order of defintion in source code.
+     
   3. Children sit on parents (layers / z-index).
      - Deepest nested elements are displayed top most.
   
+  
 - CSS Position Property
+
   1. Static 
      - Default HTML element positioning.
+     
   2. Relative
      - Relative to the elements original / static position.
      a. When an element is moved using its relative position, no other element position is affected.
      b. In relative position, the coordinate values = margin values
         {position: relative; top: 50px;} is the same as {margin-top: 50px;}
+        
   3. Absolute
-
+     - Positions an element relative to its parent element, usually the webpage body or a div.
+     - Allows for more precise and easy location of elements in a webpage.
+     
+  4. Fixed
+     - Positions an element at a fixed location in the screen. 
+     - Element is always visible irrespective of scrolling.
+     
+     
+- Centering Elements with CSS
+  - To center all elements in a page / container, set the text-align property in the body / container to center.
+    - body {text-align: center;}
+  - If the child element is a block display that has its width set to a defined value, set its margin property to auto.
+    - h1 {width: 10%; margin: 0 auto 0 auto;} (circle shorthand follows the order: ⬆, ➡, ⬇, ⬅) OR 
+    - h1 {width: 10%; margin: 0 auto;} OR
+    - h1 {width: 10%; margin-top: 0; margin-right: auto; margin-bottom: 0 margin-left: auto;}
+    
+    
+- Font Styling
+  1. Serif: Has little feet (serifs) at the end points of a character e.g. Times New Roman
+  2. Sans-serif: Block characters e.g. Arial
+  3. Monospace: Each character occupies same width. Suitable for coding.
+  4. Cursive: Hand-writting
+  5. Fantasy: Not commonly used in webpages due to readability reasons.
+  
+  - Setting the font family for a webpage body involves setting first, second, third, ... and final fallback choice:
+    - body {font-family: verdana, sans-serif;}
+    
+  - You can also add font-embeddings from Google Fonts as a link in the index.html page. 
+    The font-style is downloaded and embedded in the browser along with the webpage.
+    
+    
+- CSS Sizing
+  1. Set the font-size in px (pixels). 
+     - Static font-size. Does not change with zoom setting % in browser.
+     h1 {font-size: 160px;}
+     
+  2. Set the font-size in %. 
+     - Dynamic font-size. Size changes with zoom setting % in browser.
+     - Conversion: 16px = 100%
+     h1 {font-size: 1000%;}
+  
+  3. Set the font-size in em.
+     - Dynamic font-size.
+     - Conversion: 16px = 1em
+     h1 {font-size: 10em;}
+  
+     - A child with font-size in either % or em, inherits the font-size from the parent and adds to its specified font-size value.
+       Results in bigger font-size than intended.
+  
+  4. Set the font-size in rem (root em).
+     - Available in CSS3.
+     - Dynamic font-size.
+     - rem ignores all parent sizing and uses only the specified font-size value.
+     
+ 
+ - CSS Font Properties
+   1. Color
+      - h1 {color: #66ffbe;}
+      
+   2. Font-weight
+      - h1 {font-weight: bold;}
+      
+   3. Line-height
+      - h1 {line-height: 2;}
+  
+  
+  - CSS Float and Clear
+    - Use the float property to make an image float to the left/right of a text OR to wrap a text around an image.
+      .image {float: left;}
+      
+    - Use the clear property to remove wrapping of a text around an image.
+      .text {clear: left;}
+  
+  
+- Tips:
+  - Set the dimension properties (width, height) of an element with % and its margin, border-size, padding properties with pixels (px).
+     {width: 50%; margin: 50px 0 50px 0;}
+     
+  - Use CSS button generator (https://css3buttongenerator.com/) to automatically generate CSS code for your buttons. 
+    Other similar element-modifier code-generator platforms exist.
