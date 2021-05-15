@@ -1,5 +1,7 @@
 Project: Creating a Beautiful Personal Website with CSS
 
+Inspiration: https://web.archive.org/web/20200107113729/http://seanhalpin.io/
+
 - Favicons. https://favicon.cc
 - HTML Divs
 
