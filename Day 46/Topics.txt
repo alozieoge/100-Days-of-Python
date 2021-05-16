@@ -1,0 +1,9 @@
+Project: Build a mucical time machine. 
+Objective: Create a playlist of songs from apast date.
+
+Steps:
+1. Use BeautifulSoup to scrape the Billboard Top 100 Songs from a past date.
+2. Extract song titles from the list.
+3. Use Spotify API to create a new playlist for that date.
+4. Search Spotify for those songs and add them to the playlist.
+
