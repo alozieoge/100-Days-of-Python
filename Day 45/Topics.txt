@@ -1,5 +1,54 @@
 Topic: Web Scraping for Data using BeautifulSoup
 
-Project: 
+Project: Scrape Empire's 100 Greatest Movies of all time and write the list to a file.
 
-- Webscraping vs API
+Ways to get online data:
+1. API
+2. Webscraping
+
+
+How to get instances of HTML elements with BeautifulSoup
+
+  soup = BeautifulSoup(markup="", parser="", features="")
+
+  Parser = "html.parser" or "lxml"
+
+1. Using the object property. Returns only the 1st instance of the element that matched.
+   soup.title
+   soup.a
+   soup.li
+   
+2. Using the find() and find_all() methods.
+   a. To get the 1st matching instance of an element tag 
+      soup.find(name="h1")
+      
+   b. To get the 1st matching instance of an element tag with the specified id.
+      soup.find(name="h1", id="name")
+  
+   c. To get all matching instances of an HTML tag with the specified class name
+      soup.find_all(name="h1", class_="heading")
+
+3. Using the select_one() and select() methods to drill into nested tags.
+   a. To get the 1st matching instance of a nested element tag 
+      soup.select_one(select="p a")
+      
+   b. To get the 1st matching instance of an element tag with the specified id.
+      soup.select_one(selector="#name")
+  
+   c. To get all matching instances of an HTML tag with the specified class name
+      soup.select(selector=".heading")
+
+
+Law and Ethics of Web-scraping
+
+Q. Is web-scraping legal?
+A. Yes, provided the data is publicly available/sources and not copyrighted.
+
+Rules:
+1. You can't commercialise copyrighted content.
+2. You can't scrap data behind authentication.
+
+Guides:
+1. Use public API if available.
+2. Respect the website owner.
+3. Limit your request rate.
