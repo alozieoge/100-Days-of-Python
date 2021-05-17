@@ -1,0 +1,20 @@
+Project: Build an Amazon Price Tracking Bot
+
+Skills: 
+- Making HTTP GET requests with requests
+- Web scraping with BeautifulSoup
+- Python string manipulation
+- Sending email with smtplib
+
+Steps:
+1. Find a product on Amazon that you want to track and get the product URL.
+
+2. Use the requests library to request the HTML page of the Amazon product using the URL above.
+
+3. Use BeautifulSoup to make soup with the web page HTML you get back. Use the "lxml" parser instead of the "html.parser".
+
+4. Use BeautifulSoup to get hold of the price of the item as a floating point number and print it. 
+   Use "".join() and split() methods to extract the number from the text result.
+   
+5. When the price is below your chosen threshold price, use the smtp module to send an email to yourself. 
+   In the email, include the title of the product, the current price and a link to buy the product.
