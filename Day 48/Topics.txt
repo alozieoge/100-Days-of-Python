@@ -1,0 +1,39 @@
+Advanced Web Scraping with Selenium
+
+Project: Automate the Cookie Clicker Game
+
+Steps to setup Selenium
+1. Install Chrome.
+2. Download Chrome Driver based on your installed Chrome version.
+   Chrome browser -> : -> Help -> About Google Chrome -> Version #
+3. Download and install Selenium in PyCharm.
+
+Selenium webdriver mimics user interaction with dynamic websites.
+
+How to find elemtents in a website
+1. By name
+2. By class name
+3. By id
+4. By tag name
+5. By xpath
+6. By link text
+
+- You can automate interaction with the website elements by clicking .click() and typing .send_keys()
+- Selenium webdriver has a Keys class that has constants for each keyboard key.
+
+
+Automated Cookie Clicker Project Steps:
+
+1. Visit the game website and familiarise yourself with how it works:
+   http://orteil.dashnet.org/experiments/cookie/
+
+2. Create a bot using Selenium and Python to click on the cookie as fast as possible.
+
+3. Every 5 seconds, check the right hand pane to see which upgrades are affordable and purchase the most expensive one. 
+   You'll need to check how much money (cookies) you have against the price of each upgrade.
+   
+4. After 5 minutes have passed since starting the game, stop the bot and print the "cookies/second".
+
+5. Tweak the algorithm if you think there is a better way to play the game. 
+   e.g. Change the time, instead of every 5 seconds to check the upgrades, what if you did every second. 
+   Or maybe the bot should buy all the affordable upgrades.
