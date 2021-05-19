@@ -46,3 +46,5 @@ print(f"\n{cookies_per_second.text}")
 print(f"Completed in {int((current_time - start_time) / 60)} minutes, {round((current_time - start_time) % 60, 2)} seconds")
 
 # driver.quit()
+
+# cookies/second : 86.2
