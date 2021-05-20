@@ -47,7 +47,7 @@ fb_login_button.click()
 confirm_button = driver.find_element_by_xpath(xpath='//button[@name="__CONFIRM__"]')
 confirm_button.click()
 
-sleep(3)
+sleep(2)
 
 # Switch back to Tinder
 driver.switch_to.window(tinder_window)
