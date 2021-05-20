@@ -53,7 +53,7 @@ sleep(2)
 driver.switch_to.window(tinder_window)
 print(driver.title)
 
-# To be continued because of Facebook time restrictions for new accounts
+# To be continued because of Facebook time restrictions for new accounts and Tinder's human verification step.
 
 
 # driver.quit()
