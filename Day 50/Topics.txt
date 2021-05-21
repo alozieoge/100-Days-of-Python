@@ -5,6 +5,7 @@ New Selenium Skills:
    You can generate your own xpath string with this format: '//<tag_name>[@<attribute>="<value>"]'
    e.g. xpath = '//button[@title="Accept All"]'
         xpath = '//*[@name="__CONFIRM__"]'
+        xpath = '//*[text()="Create New Account"]'
 
 2. Waiting for pages to load while searching for elements
       driver = webdriver.Chrome(executable_path=chrome_driver_path)
