@@ -2,8 +2,9 @@ Project: Build a Automated Complaining Twitter Bot
 Objective: Bot tweets @ the Internet Service Provider (ISP) when the download/upload speed is below a threshold.
 
 Skills:
-1. Soldifiy finding HTML elements using Xpath and CSS selectors.
+1. Find HTML elements using Xpath and CSS selectors.
 2. Implicit wait for loading websites.
+3. OOP class.
 
 Steps:
 1. Setup Twitter account
