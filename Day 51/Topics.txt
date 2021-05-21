@@ -1,0 +1,30 @@
+Project: Build a Automated Complaining Twitter Bot
+Objective: Bot tweets @ the Internet Service Provider (ISP) when the download/upload speed is below a threshold.
+
+Skills:
+1. Soldifiy finding HTML elements using Xpath and CSS selectors.
+2. Implicit wait for loading websites.
+
+Steps:
+1. Setup Twitter account
+   a. Sign up on Twitter
+   b. Get your Internet Service Provider (ISP)'s guaranteed internet speeds from your contract.
+   c. Add these details as constants in the main code file.
+   
+2. Use OOP - create a class.
+   a. Create a class - InternetSpeedBot.
+   b. In the __init__() method, create the Selenium driver and 2 other properties down and up.
+   c. Create two methods - get_internet_speed() and tweet_at_provider().
+   d. In the main.py, initialise the object and call the two methods in order. 
+      Where you first get the internet speed and then tweet at the provider.
+      
+3. Get internet speeds
+   a. Get your current live download and upload speeds from https://speedtest.net manually.
+   b. Get your internet speeds using Selenium and Python and print it out to console. 
+
+4. Build a Twitter bot
+   a. Go through the process of logging-in and tweeting on Twitter to study which selectors/id/classes/XPATHs you could target.
+   b. Use Python and Selenium to complete the same process - 
+      - Login to Twitter, 
+      - Compose the tweet to include your up/down speeds and your promised speeds, 
+      - Send the tweet.
