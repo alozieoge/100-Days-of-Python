@@ -1,0 +1,48 @@
+Project: Build an Instagram Follower Bot.
+
+Objective: An automated script that follows all the followers of your favorite / target Instagram account.
+
+New Skills:
+1. Scroll down in a pop-up window using CSS.
+
+     popup_window = driver.find_element_by_xpath(xpath=xpath)
+     scrolls = n
+     for i in range(scrolls):
+        popup_window.send_keys(Keys.END)
+        sleep(1)
+
+2. Scroll dowen in a modal window by executing javascript:
+
+     modal = self.driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]')
+     for i in range(10):
+         # In this case we're executing some Javascript, that's what the execute_script() method does. 
+         # The method can accept the script as well as a HTML element. 
+         # The modal in this case, becomes the arguments[0] in the script.
+         # Then we're using Javascript to say: "scroll to the top of the modal (popup) element by the height of the modal (popup)"
+         self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", modal)
+         time.sleep(2)
+
+
+Steps:
+1. Get your credentials
+   a. Setup your Instagram account: https://www.instagram.com/
+   b. Find an account you would like to target. (Pick a large account that has a lot of followers)
+   
+2. Create a class
+   a. Create a class called InstaFollower.
+   b. In the init() method, create the Selenium driver.
+   c. Create three methods - login() and find_followers() and follow().
+   d. From main.py, initialise the object and call the 3 methods in order.
+   
+3. Login to Instagram
+   a. Use Selenium and Python to login to Instagram automatically using your email and password. 
+      Write your code in the login() method.
+      
+4. Find target account
+   a. When you go to a target Instagram account, you can click on their follower count to see all their followers. 
+      The URL is the name of the Instagram account added to the end of 'instagram.com'
+   b. Scroll down on the followers popup with 1 second delay. 
+      Write your code in the find_followers() method.
+   c. You might encounter an account that you have already followed, in this case, when you press on the button it will generate a popup asking if you want to unfollow that person.
+      When this happens the follow button is hidden under the popup and you will get a ElementClickInterceptedException  if you try to continue clicking on the follow button. 
+      Handle this exception and when it occurs, simply click on the "Cancel" button to dismiss the popup and continue to follow other people.
