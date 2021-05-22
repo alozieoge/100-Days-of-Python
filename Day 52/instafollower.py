@@ -8,8 +8,8 @@ CHROME_DRIVER_PATH = "C:/Development/chromedriver.exe"
 
 INSTAGRAM_URL = "https//www.instagram.com"
 
-# INSTAGRAM_EMAIL = os.environ.get("INSTAGRAM_EMAIL")
-# INSTAGRAM_PASSWORD = os.environ.get("INSTAGRAM_PASSWORD")
+INSTAGRAM_EMAIL = os.environ.get("INSTAGRAM_EMAIL")
+INSTAGRAM_PASSWORD = os.environ.get("INSTAGRAM_PASSWORD")
 
 TARGET_ACCOUNT = ""
 
