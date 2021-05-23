@@ -1,0 +1,31 @@
+Capstone Project: Data Entry Job Automation
+
+Objective: Automate a data entry job that: 
+- Extracts house rent prices and details from Zillow,
+- Enters the results in a Google Form and submits the entry,
+- Creates a spreadsheet of entries in a Google Sheet.
+
+Requirements:
+1. Create your own form at https://docs.google.com/forms/.
+
+2. Add 3 questions to the form, make all questions "short-answer"
+   a. What's the address of the property?
+   b. What's the price per month?
+   c. What's the link to the property?
+
+3. Click send and copy the link address of the form. You will need to use this in your program.
+
+4. Go to this web address on Zillow and see how the website where you'll be scraping the data is structured.
+
+Main Program:
+5. Use BeautifulSoup/Requests to scrape all the listings from the Zillow web address (Step 4 above).
+   a. Create a list of links for all the listings you scraped.
+   b. Create a list of prices for all the listings you scraped.
+   c. Create a list of addresses for all the listings you scraped.
+   
+6. Use Selenium to fill in the form you created (step 1,2,3 above). 
+   Each listing should have its price/address/link added to the form. 
+   Fill in a new form for each new listing.
+   
+7. Once all the data has been filled in, click on the "Sheet" icon to create a Google Sheet from the responses to the Google Form. 
+   You should end up with a spreadsheet with all the details from the properties.
