@@ -1,0 +1,58 @@
+Topics:
+- Command Line Interface (CLI) commands
+- Introduction to Web Development with Flask
+- Python Decorators
+
+- Full Stack  = Front End + Back End
+
+3 Components of BackEnd:
+1. Client - Dining
+2. Server - Kitchen
+3. Database - Pantry/Larder
+
+- Flask is one of the most popular frameworks for creating websites using Python.
+
+Library vs Framework
+1. With an imported library, you're in full control of the program flow when you call imported library methods.
+   In a framework, you have to follow the rules and architecture, and the framework calls your methods when a functionality is triggered.
+   
+
+CLI:
+- Kernel - Actual program/code that interfaces with your hardware.
+- Shell - UI that allows you to interface with the kernel.
+  - CLI: User has more control, more powerful.
+  - GUI
+  
+Python Functions:
+1. Functoins can have input, functionality and output.
+2. Functions are 1st-class objects i.e. they can be passed around as arguments to other functions like int, string, float, etc.
+3. Functions can be nested in other functions.
+4. Functions can be returned from other functions.
+
+Decorators:
+- A Python decorator is a function that wraps around another function and gives it additional functionality or modifies its functionality.
+- Synatactic Sugar: Syntax that makes it easier to write alternative code.
+
+
+Decorator Synatax:
+
+def delay_decorator(function):
+    def wrapper_function():
+      time.sleep(2) # Can do something before the function call.
+      function()
+      function()    # Can do something after the function call.
+    return wrapper_function
+    
+@delay_decorator
+def say_hello():
+    print("Hello")
+    
+# Simple syntax because of decorator
+say_hello() 
+
+# Alternative synatax if no decorator
+decorated_function = delay_decorator(say_hello)
+decorated_function()
+
+  
+
