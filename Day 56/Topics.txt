@@ -1,0 +1,29 @@
+Topic: Deep-dive into Web Development with Flask
+- Static Files
+- HTML/CSS File Rendering in Flask (render_template())
+- Personal Website
+
+References:
+- Flask documentatin
+- html5up.net
+- unsplash.com
+
+Project: Build a live personal business card website.
+
+Flask Rendering Templates Requirements:
+1. HTML code files should be stored in a folder named 'templates' in the project directory.
+2. Static files e.g. CSS, images, videos ... should be stored in a folder named 'static' in the project directory.
+
+- To edit a website in Google Chrome:
+  Go to: Ctrl + Shift + C (Developer Tools) --> Console --> Type: 
+         document.body.ContentEditable=true
+         
+Project Steps:
+1. Download the website template at: https://html5up.net/uploads/demos/identity/
+2. Create a new PyCharm project called name-card and create a new Flask Application from scratch.
+3. Create the necessary folders and move the relevant files from the download in step1.
+4. Get the website to work when you access the root route ("/")
+5. Personalise the website, change the background image, change the text, change the links, make it your own.
+   - Replace the background image by over-writing the existing file.
+   - Changing the href attribute in the footer list items automatically changes the icons used.
+
