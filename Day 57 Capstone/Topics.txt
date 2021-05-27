@@ -1,0 +1,25 @@
+Topics: Python Web Development with Flask
+- Templating with Jinja
+- URL Building
+
+Skills:
+- Run Python code in a HTML script.
+- Passing keyword arguments to HTML templates.
+- Calling Python functions from within HTML <a> tags.
+- Passing arguments to functions called from within HTML.
+
+Project: Blog Capstone
+
+Steps:
+1. Download the starting files for this project.
+2. Run the main.py file to see the styling and website rendered.
+3. Using the API for our blog posts created on n:Point, render all the blogs' title and subtitles on the home page.
+4. Make a "Read" anchor tag at the end of each blog post preview link to a page with the entire blog - title, subtitle and body. The individual blog posts should live at the path: URL/post/blog_id
+
+Tip:
+1. Make the requests.get() call at the top level of main.py, outside all of the functions, so that the response is accessible to all functions.
+2. Make a 'Post' class that contains the id, title, subtitle and body of a blog post as attributes and create a 'post' object for each blog post.
+3. Styling not displayed? 
+   Solution: After you click the "read" link, it shows: "GET /post/static/css/styles.css HTTP/1.1" 404 -
+   This is because the post.html is in different file location than the styles.css, not in the same hierarchy.
+   Therefore, you need to add "../" (from Danielization, 30-03-2021).
