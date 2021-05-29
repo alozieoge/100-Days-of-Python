@@ -1,0 +1,29 @@
+Topic: Web Foundations - Bootstrap (v.4.6)
+
+- Bootstrap framework was developed by Twitter, but is now open-source.
+
+Web Design 101 - Wireframing
+
+Workflow:
+1. Look at other people's website.
+2. Look at UI patterns. ui-patterns.com
+3. Create a simple wireframe sketch. sneakpeetit.com, basalmiq.cloud
+4. Crteate a mock-up
+5. Create a prototype website or animation. dribbble.com
+
+Project: Create a landing page for the tindog app using Bootstrap and CSS.
+Objective: Style the base HTML template using Bootstrap.
+
+How to get Bootstrap
+1. Link to CSS stylesheet.
+2. Copy and paste the starter template.
+3. Download CSS and Javascript source code to include in website files.
+
+Bootstrap Components
+1. Navigation Bar
+2. Grid Layout for responsiveness
+3. Containers
+4. Buttons
+
+
+
