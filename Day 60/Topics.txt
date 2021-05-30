@@ -1,0 +1,46 @@
+Project: Make POST Requests with Flask and HTML Forms
+
+Object: Make the Contact Form on the contact.html page work.
+
+New skills: 
+1. Make POST request from HTML <form> submission with Flask.
+2. Receiving user submission with Flask 'request' object.
+3. Send an email with smtplib.
+
+Steps:
+
+A. HTML Forms Revision
+   1. Create a new PyCharm Project called html-forms containing a main.py and index.html.
+   2. Create a new Flask application and serve the index.html page. Add an <h1> to the index.html so that you can tell if it's working.
+   3. Create a HTML Form in index.html with name and password label and input text fields.
+      The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+B. Handle POST requests with Flask servers
+   4. Use the HTML <form> documentation to make the HTML form submit a "POST" request to the path "/login".
+   5. After form is submitted, catch this POST request in our server. To do this we first need to give each input in our form a name attribute.
+   6. Create a decorator in our main.py that will trigger a method when it receives a POST request.
+   7. Use the Flask method called request to tap into the parameters of the request that was made to our server.
+      
+      @app.route('/login', methods=["POST"])
+      def receive_data():
+          name = request.form["name"]
+          password = request.form["password"]
+          return render_template("login.html", name=name, password=password)
+          
+      NOTE: The action attribute of the form can be set to "/login" e.g.
+        <form action="/login" method="post">
+      or it can be dynamically generated with url_for e.g.
+        <form action="{{ url_for('receive_data') }}" method="post">
+      Depending on where your server is hosted, the "/login" path may change. 
+      So it's usually a better idea to use url_for to dynamically generate the url for a particular function in your Flask server.
+
+
+C. Get the Contact Form from the 'blog-upgrade' project to work
+   8. Use your previous day's blog project as starting point.
+   9. Add a "/form-entry" route in main.py to receive data from the form.
+   10. Update the code in contact.html and main.py so that you print the information the user has entered into the form and return a <h1> that says "Successfully sent your message".
+   11. Combine the "/contact" route with "/form-entry" so that they are both under the route "/contact" but depending on which method (GET/POST) that triggered the route, handle it appropriately.
+   12. Instead of returning a <h1> that says "Successfully sent message", update the contact.html file so that the <h1> on the contact.html file becomes "Successfully sent message".
+
+D. Send email with smtplib
+   13. Make the contact form complete by sending us (website owner) an email when a user is trying to get in touch.
