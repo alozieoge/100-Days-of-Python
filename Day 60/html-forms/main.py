@@ -13,6 +13,7 @@ def receive_data():
     name = request.form["name"]
     password = request.form["password"]
     return render_template("login.html", name=name, password=password)
+    # return f"<h1>Name: {name}, Password: {password}</h1>"
 
 
 if __name__ == "__main__":
