@@ -1,0 +1,1 @@
+Files upload for the blog website upgrade using Flask + Jinja + Bootstrap.
