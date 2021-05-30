@@ -6,6 +6,9 @@ Build a blog website with:
 - dynamically generated blog post pages with full screen titles,
 - fully mobile responsive with an adaptive navigation bar.
 
+Tip of the Day:
+- Programming is just tinkering, it's not an exam, you don't have to memorise everything.
+
 Steps:
 A. Download starting project
 
@@ -47,3 +50,6 @@ F. Fetch and render blog posts from an API.
    13. In main.py return the json data at the API endpoint - .
    14. Use the data from the API to render the home page, replacing the title, subtitle, author and dates of each blog post with the data from the API.
 
+G. Render individual posts.
+   15. Render each individual post in the post.html page. 
+       When a user clicks on a particular post title on the home page (index.html), take them to the post.html page where the title/subtitle/image/date/author/body of the post is shown
