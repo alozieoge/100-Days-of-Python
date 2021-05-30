@@ -1,0 +1,1 @@
+Files for the upgraded blog website with HTML forms and sending messages via email.
