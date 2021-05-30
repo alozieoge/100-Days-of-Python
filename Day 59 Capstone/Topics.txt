@@ -1,0 +1,49 @@
+Project: Upgrade the Blog (Day 56 -> Flask + Jinja) by adding styling with Bootstrap.
+
+Features: 
+Build a blog website with:
+- multi-page website with an interactive navigation bar,
+- dynamically generated blog post pages with full screen titles,
+- fully mobile responsive with an adaptive navigation bar.
+
+Steps:
+A. Download starting project
+
+   1. Download the Clean Blog Template from Start Bootstrap's website:
+      https://startbootstrap.com/previews/clean-blog/
+
+   2. Unzip the downloaded file and rename the folder to "upgraded blog".
+
+   3. Open the project folder in PyCharm and:
+      a. Create the static and templates folders.
+      b. Move the files in the project to the correct folders (HTML files to templates and all folders to static).
+      c. Delete the mail folder. We're going to be coding up the functionality from scratch.
+      d. Create a header.html and footer.html file and the all important main.py.
+
+B. Get the page to work.
+   4. Use Flask to get the home page to render when you visit: http://localhost:5000 in your browser.
+   
+C. Fix the header and footer. 
+   5. Update the relative path to the CSS stylesheet in the header in index.html so that the styling and bootstrap all appear.
+      Build a dynamic url for the static resources instead of just pointing to the static folder. 
+      <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+      
+   6. Fix the footer resources so that the Javascript works. 
+      You can verify this by checking that when you scroll the navigation bar becomes sticky at the top and changes background color
+      
+D. Use Jinja to render templates.
+   7. Remove the <head> & navigation code from index.html and place it in the header.html file.
+   8. Remove the <footer> from index.html and place it in the footer.html file.
+   9. Using the Jinja documentation, use include to make the website still function exactly the same as before.
+      {% include "header.html" %}
+      {% include "footer.html" %}
+
+E. Make the About and Contact pages work.
+   10. Delete the navigation bar item that points to the "Sample Post".
+   11. Update main.py and the about.html and contact.html files so that when you click on the About link in the navigation bar it goes to the About page and likewise with the Contact page. 
+   12. Make the static images work on the About and Contact pages.
+
+F. Fetch and render blog posts from an API.
+   13. In main.py return the json data at the API endpoint - .
+   14. Use the data from the API to render the home page, replacing the title, subtitle, author and dates of each blog post with the data from the API.
+
