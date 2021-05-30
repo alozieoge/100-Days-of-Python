@@ -43,4 +43,4 @@ C. Get the Contact Form from the 'blog-upgrade' project to work
    12. Instead of returning a <h1> that says "Successfully sent message", update the contact.html file so that the <h1> on the contact.html file becomes "Successfully sent message".
 
 D. Send email with smtplib
-   13. Make the contact form complete by sending us (website owner) an email when a user is trying to get in touch.
+   13. Make the contact form complete by sending (website owner) an email when a user is trying to get in touch.
