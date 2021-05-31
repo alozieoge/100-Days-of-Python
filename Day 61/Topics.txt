@@ -19,6 +19,12 @@ Lessons:
 Tip of the Day:
 - Strive to understand how things work under the hood. You can't debug magic.
 
+Big Bug: 
+- When on the Welcome page, clicking the 'Login' button does not switch to the Login page nor change the URL.
+Solution: 
+- Changed the button element <button></button> to an anchor tag <a href=""></a>. 
+  href attribute does not work with buttons.
+
 Steps:
 A. Create forms with Flask-WTForms.
    1. Create the login route that renders the login.html
