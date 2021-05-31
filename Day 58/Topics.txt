@@ -26,6 +26,13 @@ Bootstrap Components
 2. Grid Layout for responsiveness
 3. Containers
 4. Buttons
+5. Carousel
+6. Cards
+
+Lessons:
+1. Bootstrap atribute and class for visually-impaired accessibility:
+    - aria-hidden = true / false;
+    - class="sr-only" - specifies the name of the HTML tag/element to be read out.
 
 
 
