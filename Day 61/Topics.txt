@@ -1,0 +1,83 @@
+Topic: Build Advanced Forms with Flask-WTForms and Flask-Bootstrap
+
+Project: Build a website that holds a secret and requires the correct username and password to login and access them.
+
+Skills / Tools:
+1. Creating and inheriting from a class
+2. Creating package requirements document.
+3. Form data validation
+4. WTForms instead of HTML forms
+5. Template inheritance.
+6. Flask-Bootstrap template - wtf.quick_forms()
+
+Lessons:
+1. Install Flask-WTF with pip.
+2. Freeze the current environment state to the requirements.txt
+3. Always specify a Flask app secret_key when you're collecting user-entered data on your website.
+4. Templating Inheritance allows you to extend styling of a parent template in its child web pages.
+
+Tip of the Day:
+- Strive to understand how things work under the hood. You can't debug magic.
+
+Steps:
+A. Create forms with Flask-WTForms.
+   1. Create the login route that renders the login.html
+   2. Create a simple login form using the Flask-WTF documentation.
+      Specifications:
+      a. It must have an email and password field.
+      b. They can both be StringFields.
+      c. You don't have to worry about validators.
+      d. Both email and password inputs should be size 30. (This describes the width of the input).
+      e. You should not need to create any <label> or <input> elements manually using HTML.
+   3. To include csrf protection, add the following code in your login.html:
+        {{ form.csrf_token }}
+      and create a secret key in your main.py, which will be used to generate the csrf_token.
+        app.secret = "some secret string"
+      
+      For 'Method Not Allowed' error: https://stackoverflow.com/questions/21689364/method-not-allowed-flask-error-405
+      For Flask app.secret_key: https://stackoverflow.com/questions/22463939/demystify-flask-app-secret-key
+      
+B. Code improvements to the WTForm. 
+   4. Change the password input to use a PasswordField from WTForms to obscure the text typed into the input.
+   5. The arguments given when creating a StringField or PasswordField is for the label property of the form field.
+   6. Always use dynamically built urls {{ url_for('function_name') }} when refering to Flask app route functions and file paths {{ url_for('static', filename='styles.css') }}.
+   7. Format the layout of the labels and inputs in our WTForms generated form by using normal HTML elements.
+   8. Replace the submit input/button HTML element with the wtform 'SubmitField'.
+  
+C. Adding validation to the Flask-WTForm
+   9. Add 'validator' objects when creating each field in our form.
+   10. Tap into these errors generated from each field and loop through them to show some text when an error appears.
+       Errors are stored in: form.<field>.errors
+   11. Tell our form to validate the user's entry when they hit submit. 
+       Edit our route and make sure it is able to respond to POST requests and then to 'validate_on_submit()'.
+   12. To make sure that we are giving all users field validation, we have to switch off the browser validation. 
+       Do that with an attribute on the form element called 'novalidate'.
+   13. Add Email validation to the email field so that you must type a valid email (with "@" and ".") otherwise you get an error. 
+   14. Add Length validation to the password, so you must type at least 8 characters.
+   
+D. Receiving Form data with WTForms
+   15. To get hold of the form data with WTForms, just tap into the <form_object>.<form_field>.data
+   16. Check before printing the field data whether the form has been submitted (POST request) or if it's GET request when the form is being rendered.
+       Previously we used: 
+          if request.method == "POST"
+       Now, we're simply going to check the return value of validate_on_submit() which will be True if validation was successful after the user submitted the form, or False if it failed.
+       
+   17. Update the /login route in main.py so that 
+       - if the form was submitted and validated and their credentials matched the admin details, then show them the success.html page.
+       - Otherwise show them the denied.html page
+       
+E. Inheritance Template with Jinja
+   18. You can inherit HTML templates using Jinja templating code words.
+   19. You can also use super() blocks to specify the part of the template that you want to keep but modify or improve.
+   
+F. Using Flask-Bootstrap as an inherited template
+   20. Install Flask-Bootstrap to your project using pip:
+          pip install Flask-Bootstrap
+   21. Delete the super block in the denied.html file. 
+       Use the Flask-Bootstrap documentation to convert our denied.html, success.html, login.html and index.html to use Bootstrap as the template.
+          https://pythonhosted.org/Flask-Bootstrap/basic-usage.html
+
+G. Flask-Bootstrap supports WTForms
+   22. We're using Flask-Bootstrap because it has one of the most convenient methods for generating forms with WTForms in 1 line of code.
+          {{ wtf.quick_form(form) }}
+       The above code replaces all <form>-related code in login.html and handles form creation - labels, text fields, submit buttons and error validation.
