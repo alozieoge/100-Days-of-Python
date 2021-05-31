@@ -1,5 +1,7 @@
 Topic: Web Foundations - Bootstrap (v.4.6)
 
+Project: Build a responsive website for the tindog app using Bootstrap.
+
 - Bootstrap framework was developed by Twitter, but is now open-source.
 
 Web Design 101 - Wireframing
