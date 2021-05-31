@@ -1,0 +1,1 @@
+Files for the website created with Flask-WTForms and Flask-Bootstrap using template inheritance.
