@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Login{% endblock %}
+{% block content %}
+	<div class="container">
+		<h1>Login</h1>
+        <!-- This is where our form will go. -->
+		{{ wtf.quick_form(form, novalidate=True) }}
+<!--			<form action=" {{ url_for('login') }}" method="POST" novalidate>-->
+<!--				{{ form.csrf_token }}-->
+<!--&lt;!&ndash;				<label for="email">Email: </label>&ndash;&gt;-->
+<!--&lt;!&ndash;				<input type="text" id="email" name="email" placeholder="Enter your email...">&ndash;&gt;-->
+<!--&lt;!&ndash;				<label for="password">Password: </label>&ndash;&gt;-->
+<!--&lt;!&ndash;				<input type="password" id="password" name="password" placeholder="Enter your password...">&ndash;&gt;-->
+<!--&lt;!&ndash;				<button type="submit">Log In</button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;				Angela's approach to create labels and input fields&ndash;&gt;-->
+<!--				<p>-->
+<!--					{{ form.email.label }} <br> {{ form.email(size=30) }}-->
+<!--					{% for err in form.email.errors %}-->
+<!--					<span style="color: red">{{ err }}</span>-->
+<!--					{% endfor %}-->
+<!--				</p>-->
+<!--				<p>-->
+<!--					{{ form.password.label }} <br> {{ form.password(size=30) }}-->
+<!--					{% for err in form.password.errors %}-->
+<!--					<span style="color: red">{{ err }}</span>-->
+<!--					{% endfor %}-->
+<!--				</p>-->
+<!--				<p>-->
+<!--					{{ form.submit }}-->
+<!--				</p>-->
+
+<!--			</form>-->
+        </div>
+{% endblock %}
