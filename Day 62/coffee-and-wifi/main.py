@@ -11,15 +11,18 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 Bootstrap(app)
 
+# add: Location URL, open time, closing time, coffee rating, wifi rating, power outlet rating fields
+# make coffee/wifi/power a select element with choice of 0 to 5.
+# e.g. You could use emojis ☕️/💪/✘/🔌
+# make all fields required except submit
+# use a validator to check that the URL field has a URL entered.
 
 class CafeForm(FlaskForm):
     cafe = StringField(label="Cafe name", validators=[DataRequired()])
     location = StringField(label="Cafe Location on Google Maps (URL)", validators=[DataRequired(), URL()])
     open_time = StringField(label="Opening Time e.g. 8AM", validators=[DataRequired()])
     close_time = StringField(label="Closing Time e.g. 5:30PM", validators=[DataRequired()])
-    coffee = SelectField(label="Coffee Rating",
-                         choices=['❌', '☕️', '☕️☕️', '☕️☕️☕️',
-                                  '☕️☕️☕️☕️', '☕️☕️☕️☕️☕️'],
+    coffee = SelectField(label="Coffee Rating", choices=['❌', '☕️', '☕️☕️', '☕️☕️☕️', '☕️☕️☕️☕️', '☕️☕️☕️☕️☕️'],
                          validators=[DataRequired()])
     wifi = SelectField(label="Wifi Strength Rating", choices=['❌', '💪', '💪💪', '💪💪💪', '💪💪💪💪', '💪💪💪💪💪'],
                        validators=[DataRequired()])
@@ -27,16 +30,11 @@ class CafeForm(FlaskForm):
                         validators=[DataRequired()])
     submit = SubmitField(label="Submit")
 
-# Exercise:
-# add: Location URL, open time, closing time, coffee rating, wifi rating, power outlet rating fields
-# make coffee/wifi/power a select element with choice of 0 to 5.
-# e.g. You could use emojis ☕️/💪/✘/🔌
-# make all fields required except submit
-# use a validator to check that the URL field has a URL entered.
+    
+# Alternative way to create a child class inheriting from a parent.
 # ---------------------------------------------------------------------------
 #
-#
-# class AddForm(FlaskForm):
+# class CafeForm(FlaskForm):
 #     def __init__ (self):
 #         super().__init__()
 #         self.cafe_name = StringField(label="Cafe name", validators=[DataRequired])
@@ -47,9 +45,6 @@ class CafeForm(FlaskForm):
 #         self.wifi_rating = StringField(label="Wifi Strength Rating", validators=[DataRequired])
 #         self.power_socket = StringField(label="Power Socket Availability", validators=[DataRequired])
 #         self.submit = SubmitField(label="Submit")
-#
-#
-# add_form = AddForm()
 
 
 # all Flask routes below
@@ -61,11 +56,8 @@ def home():
 @app.route('/add', methods=['GET', 'POST'])
 def add_cafe():
     form = CafeForm()
-    # Exercise:
-    # Make the form write a new row into cafe-data.csv
-    # with   if form.validate_on_submit()
+    # Make the form write a new row into cafe-data.cs using 'if form.validate_on_submit()'
     if form.validate_on_submit():
-        # print("True")
         new_data = [form.cafe.data, form.location.data, form.open_time.data, form.close_time.data,
                     form.coffee.data, form.wifi.data, form.power.data]
         write_csv(DATA_FILE, new_data)
@@ -86,7 +78,6 @@ def read_csv(csv_filename):
     with open(csv_filename, newline='', encoding='utf-8') as csv_file:
         csv_data = csv.reader(csv_file, delimiter=',')
         for row in csv_data:
-            # print(row)
             list_of_rows.append(row)
     return list_of_rows
 
