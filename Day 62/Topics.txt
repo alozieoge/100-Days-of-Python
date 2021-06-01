@@ -2,6 +2,11 @@ Topic: Flask, WTForms, Bootstrap and CSV
 
 Project: Coffee and Wifi Cafe
 
+Objective: Build a website with Python + Flask + WTForms + Bootstrap that:
+- shows the qualities of cafes (location URL, open and close times, coffee, wifi and power availability)
+- allows the user/admin to add new cafes to update the list.
+- reads from and persists to a local CSV file.
+
 Lessons:
 1. Set the encoding='utf-8' when opening the csv file with open() for csv.reader()
 2. 
@@ -17,23 +22,24 @@ Steps
    
 2. Modify the css/styles.csss stylesheet using bootstrap blocks and super blocks (Flask-Bootstrap documentation). ✅
 
-3. The '/cafes' route should render the cafes.html file. 
+3. The '/cafes' route should render the cafes.html file. ✅
    This file should contain a Bootstrap table which displays all the data from the cafe-data.csv
    An object called cafes is passed to cafes.html from the /cafes route. Put it in a <p></p> to see what the data in cafes look like.
 
-4. The location URL should be rendered as an anchor tag <a> in the table instead of the full link. 
+4. The location URL should be rendered as an anchor tag <a> in the table instead of the full link. ✅
    It should have the link text "Maps Link" and the href should be the actual link.
    
 5. Clicking on the "Show Me!" button on the home page should take you to the cafes.html page. ✅
 
-6. There should be a secret route "/add" which doesn't have a button, but those in the know should be able to access it and it should take you to the add.html file.
+6. There should be a secret route "/add" which doesn't have a button, but those in the know should be able to access it and it should take you to the add.html file. ✅
 
-7. Use Flask-WTForms and Flask-Bootstrap to create a quick_form() in the add.html page that contains all the fields in the demo.
+7. Use Flask-WTForms and Flask-Bootstrap to create a quick_form() in the add.html page that contains all the fields in the demo. ✅
    Make sure that the location URL field has validation that checks the data entered is a valid URL.
+   Use wtforms.SelectField class to generate combo-box list for the coffee rating, wifi strength and power socket availability.
 
-8. When the user successfully submits the form on add.html, append the data to the cafe-data.csv. 
+8. When the user successfully submits the form on add.html, append the data to the cafe-data.csv. ✅
    The data from each field need to be comma-separated like all the other lines of data in cafe-data.csv.
    
-9. Make sure all the navigation links in the website work.
+9. Make sure all the navigation links in the website work. ✅
 
 
