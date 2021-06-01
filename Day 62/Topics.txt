@@ -1,0 +1,39 @@
+Topic: Flask, WTForms, Bootstrap and CSV
+
+Project: Coffee and Wifi Cafe
+
+Lessons:
+1. Set the encoding='utf-8' when opening the csv file with open() for csv.reader()
+2. 
+
+Tip of the Day:
+- Learning happens when you're stuck and solve your problems. 
+  Learning doesn't happen in tutorials, it happens when you struggle and overcome your struggles. 
+  When you show your struggles who's boss!
+
+Steps
+1. Download the starting files for the project. ✅
+   The starting files include the partially-built front-end for the website.
+   
+2. Modify the css/styles.csss stylesheet using bootstrap blocks and super blocks (Flask-Bootstrap documentation). ✅
+
+3. The '/cafes' route should render the cafes.html file. 
+   This file should contain a Bootstrap table which displays all the data from the cafe-data.csv
+   An object called cafes is passed to cafes.html from the /cafes route. Put it in a <p></p> to see what the data in cafes look like.
+
+4. The location URL should be rendered as an anchor tag <a> in the table instead of the full link. 
+   It should have the link text "Maps Link" and the href should be the actual link.
+   
+5. Clicking on the "Show Me!" button on the home page should take you to the cafes.html page. ✅
+
+6. There should be a secret route "/add" which doesn't have a button, but those in the know should be able to access it and it should take you to the add.html file.
+
+7. Use Flask-WTForms and Flask-Bootstrap to create a quick_form() in the add.html page that contains all the fields in the demo.
+   Make sure that the location URL field has validation that checks the data entered is a valid URL.
+
+8. When the user successfully submits the form on add.html, append the data to the cafe-data.csv. 
+   The data from each field need to be comma-separated like all the other lines of data in cafe-data.csv.
+   
+9. Make sure all the navigation links in the website work.
+
+
