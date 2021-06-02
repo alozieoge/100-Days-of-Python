@@ -48,21 +48,6 @@ def add():
     return render_template('add.html')
 
 
-# @app.route('/submit', methods=['POST'])
-# def receive_data():
-#     name = request.form['name']
-#     author = request.form['author']
-#     rating = request.form['rating']
-#     book = {"name": name,
-#             "author": author,
-#             "rating": rating, }
-#     all_books.append(book)
-#     print(all_books)
-#     # NOTE: You can use the redirect method from flask to redirect to another route
-#     # e.g. in this case to the 'add' page after the form has been submitted.
-#     return redirect(url_for('add'))
-
-
 @app.route('/edit', methods=['GET', 'POST'])
 def edit():
     if request.method == 'POST':
