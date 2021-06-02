@@ -1,0 +1,29 @@
+Topic: Databases with SQLite and SQLAlchemy.
+
+Project: Build a library webapp - a website to keep track and rate the books you have read using Flask + SQL database.
+
+Lessons:
+1. SQLAlchemy allows you to write Python code to interact with a database and enables the compiler spot typos and errors in code.
+2. 
+
+Steps:
+A. Download the starting project. 
+ 
+B. Make the website work
+   1. When you goto http://locahost:5000, you should have a <h1> that says My Library and link <a> to Add New Book. ✅
+   2. When you goto the /add path, e.g. http://locahost:5000/add, you should see the add.html form
+   3. Make the form on the /add path work so that when you click "Add Book", the book details gets added as a dictionary to the list called 'all_books' in main.py.
+   4. Make the home page show each of the books in all_books as a list item <li> in an unordered list <ul>.
+   5. Make the home page show <p>Library is empty.</p> if there are no books. 
+      Also, make sure the "Add New Book" link works and takes the user to the /add page.
+      
+C. Refresh the server and your data is gone.
+   6. Add a few books to your website. You should see them listed on the home page.
+   7. Stop running your Flask server and start it again.
+   8. Go to your website and reload the home page. What happened to your books?
+   
+D. SQLite database
+   
+E. SQLAlchemy
+
+F. Build the SQLite database into the Flask website.
