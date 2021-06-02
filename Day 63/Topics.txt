@@ -3,27 +3,44 @@ Topic: Databases with SQLite and SQLAlchemy.
 Project: Build a library webapp - a website to keep track and rate the books you have read using Flask + SQL database.
 
 Lessons:
-1. SQLAlchemy allows you to write Python code to interact with a database and enables the compiler spot typos and errors in code.
-2. 
+1. Data persistence
+2. SQLAlchemy allows you to write Python code to interact with a database and enables the compiler spot typos and errors in code.
+3. I need to learn how the Python-Flask-HTML interface works - how information / data is transferred from HTML form to Python function and vice-versa.
 
 Steps:
 A. Download the starting project. 
  
 B. Make the website work
    1. When you goto http://locahost:5000, you should have a <h1> that says My Library and link <a> to Add New Book. ✅
-   2. When you goto the /add path, e.g. http://locahost:5000/add, you should see the add.html form
-   3. Make the form on the /add path work so that when you click "Add Book", the book details gets added as a dictionary to the list called 'all_books' in main.py.
-   4. Make the home page show each of the books in all_books as a list item <li> in an unordered list <ul>.
-   5. Make the home page show <p>Library is empty.</p> if there are no books. 
-      Also, make sure the "Add New Book" link works and takes the user to the /add page.
+   2. When you goto the /add path, e.g. http://locahost:5000/add, you should see the add.html form ✅
+   3. Make the form on the /add path work so that when you click "Add Book", the book details gets added as a dictionary to the list called 'all_books' in main.py. ✅
+   4. Make the home page show each of the books in all_books as a list item <li> in an unordered list <ul>. ✅
+   5. Make the home page show <p>Library is empty.</p> if there are no books.  ✅
+      Also, make sure the "Add New Book" link works and takes the user to the /add page. ✅
       
 C. Refresh the server and your data is gone.
-   6. Add a few books to your website. You should see them listed on the home page.
-   7. Stop running your Flask server and start it again.
-   8. Go to your website and reload the home page. What happened to your books?
+   6. Add a few books to your website. You should see them listed on the home page. ✅
+   7. Stop running your Flask server and start it again. ✅
+   8. Go to your website and reload the home page. What happened to your books? They're gone because the 'all_books' variable is re-initialized when the code is restarted. ✅
    
-D. SQLite database
+D. SQLite database:
+   Tasks:
+   - Create an SQLite database called new-books-collection.db ✅
+   - Create a table in this database called books. ✅
+   - The books table should contain 4 fields: id, title, author and rating. ✅
+     The fields should have the same limitations as before e.g. INTEGER/FLOAT/VARCHAR/UNIQUE/NOT NULL etc.
+   - Create a new entry in the books table that consists of the provided data. ✅
    
-E. SQLAlchemy
+E. Flask SQLAlchemy:
+   - Repeat the above tasks using SQLAalchemy. ✅
 
 F. Build the SQLite database into the Flask website.
+   9. Add new books via the /add route. ✅
+      Once a book is successfully added to the database, it should redirect to the home page. 
+   10. The home page should show all the books in the database. ✅
+   11. Add an Edit Rating Anchor Tag to each book <li>. 
+       When the button is pressed, it should take the user to an Edit Rating page where you can enter a new rating for that book. ❌❎
+       Then when you click "Change Rating" it should take you back to the home page and the new rating should be displayed next to the book.
+   12. Add a Delete Anchor Tag to each book listing <li>. ❌❎
+       When clicked it should delete the book from the database and redirect back to the home page. 
+   
