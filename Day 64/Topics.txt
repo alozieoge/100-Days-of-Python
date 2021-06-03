@@ -35,3 +35,6 @@ Requirements / Steps:
    b. Once the form is submitted and validated, add the updates to the corresponding movie entry in the database. ✅
    
 3. Delete movies from the database.
+   a. Display the ranking of the movie according to our rating. ✅
+      The only change to the code is in the home() function.
+   
