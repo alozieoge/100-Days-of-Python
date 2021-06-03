@@ -38,6 +38,7 @@ Requirements / Steps:
    b. Once the form is submitted and validated, add the updates to the corresponding movie entry in the database. ✅
    
 3. Delete movies from the database.
+
    a. Delete the movie from the database using the 'Delete' button on the back of each movie card. ✅
 
 4. Add new movies via the Add page.
@@ -67,5 +68,6 @@ Requirements / Steps:
    f. Instead of redirecting to the home page after finding the correct film, redirect to the edit.html page to update the movie rating and review. ✅
       The form on the edit page will contain these two fields. 
       
- 5. Sort and rank the movies by rating.
-    a. 
+5. Sort and rank the movies by rating.
+   a. Display the ranking of the movie according to our rating. ✅
+      The only change to the code is in the home() function.
