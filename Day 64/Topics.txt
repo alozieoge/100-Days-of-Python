@@ -1,10 +1,13 @@
-Project: Build a website for our top-10 movies of all time using Flask + WTForms + Bootstrap + SQLite + SQLAlchemy.
+Project: Build a website for our top-10 movies of all time using Flask + WTForms + Bootstrap + SQLite + SQLAlchemy + API requests + Sorting Python Lists.
 
 Lessons: 
 1. In Flask, only if you put a parameter in your decorator url like @app.route('/books/<somevariable>'), 
    should you pass some variable to the endpoint function as an argument and write: def myfunction(somevariable):
 
-2. 
+2. When creating a database, it is good practice to define the default values for each column.
+
+3. To sort a list of objects by a property/field where some values are None:
+   https://stackoverflow.com/questions/18411560/sort-list-while-pushing-none-values-to-the-end
 
 Requirements / Steps:
 0. Download the starting files and install all required packages.
@@ -35,6 +38,36 @@ Requirements / Steps:
    b. Once the form is submitted and validated, add the updates to the corresponding movie entry in the database. ✅
    
 3. Delete movies from the database.
+
+   a. Delete the movie from the database using the 'Delete' button on the back of each movie card. ✅
+
+4. Add new movies via the Add page.
+   a. Make the add page render when you click on the Add Movie button on the Home page. ✅
+      The Add page should show a WTF quick form that only contains 1 field - the title of the movie.
+      
+   b. When the user types a movie title and clicks "Add Movie", your Flask server should receive the movie title. ✅
+      
+   c. Next, use the requests library to make a request and search 'The Movie Database' API for all the movies that match that title. ✅
+      You need to register and generate an API Key. 
+      i. Read the documentation on The Movie Database to figure out how to request for movie data by making a search query.
+      ii. Using the data you get back from the API, render the select.html page and add all the movie title and year of release on to the page. 
+          This way, the user can choose the movie they want to add. There are usually quite a few movies under similar names.
+          
+   d. Once the user selects a particular film from the select.html page, the id of the movie is used to hit up another path in the Movie Database API. ✅ 
+      This API call will fetch all the data they have on that movie. e.g Poster image URLs.
+      Use the movie id that the user selected to make a request to the get-movie-details path.
+      The data you get back from the API should be used to populate the database with the new entry. The properties you will populate are:
+      - title
+      - img_url
+      - year
+      - description
+      
+   e. Once the entry is added, redirect to the home page and it should display the new movie as a card. ✅
+      It's OK to have some missing data.
+   
+   f. Instead of redirecting to the home page after finding the correct film, redirect to the edit.html page to update the movie rating and review. ✅
+      The form on the edit page will contain these two fields. 
+      
+5. Sort and rank the movies by rating.
    a. Display the ranking of the movie according to our rating. ✅
       The only change to the code is in the home() function.
-   
