@@ -22,9 +22,6 @@ TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
 TMDB_MOVIE_URL = "https://api.themoviedb.org/3/movie/"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
-TMDB_API_KEY = "b901f89ef2025f956490f1896fa3f103"
-TMDB_AUTH_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiOTAxZjg5ZWYyMDI1Zjk1NjQ5MGYxODk2ZmEzZjEwMyIsInN1YiI6IjYwYjkxYWJkY2FkYjZiMDA2ZjAwNjZkYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iF-u1kx_ouURQhZJosEILeMtIBOiEdfm2SDjVrwn_u4"
-
 search_params = {
     "api_key": TMDB_API_KEY,
     "language": "en-US",
@@ -88,13 +85,19 @@ class AddMovieForm(FlaskForm):
 @app.route("/")
 def home():
     all_movies = db.session.query(Movie).all()
-    # all_movies.sort(key=lambda x: x.rating, reverse=False)
-    sorted_movies = sorted(all_movies, key=lambda x: (x.rating is not None, x.rating), reverse=False)
-    ranked_movies = []
-    for i, movie in enumerate(sorted_movies):
-        movie.ranking = i + 1
-        ranked_movies.append(movie)
-    return render_template("index.html", all_movies=ranked_movies)
+    
+#     sorted_movies = sorted(all_movies, key=lambda x: (x.rating is not None, x.rating), reverse=False)
+#     ranked_movies = []
+#     for i, movie in enumerate(sorted_movies):
+#         movie.ranking = i + 1
+#         ranked_movies.append(movie)
+    # OR
+    
+    all_movies.sort(key=lambda x: (x.rating is not None, x.rating), reverse=False)
+    for i, movie in enumerate(all_movies):
+        all_movies[i].ranking = i + 1
+    db.session.commit()
+    return render_template("index.html", all_movies=all_movies)
 
 
 @app.route('/edit/<int:id>', methods=['GET', 'POST'])
@@ -151,13 +154,6 @@ def select(result_id):
     db.session.commit()
 
     return redirect(url_for('edit', id=movie.id))
-
-# def tmdb_search(query):
-#
-#
-#
-#     return
-
 
 
 if __name__ == '__main__':
