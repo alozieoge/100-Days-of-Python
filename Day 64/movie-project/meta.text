@@ -1,0 +1,5 @@
+Build files for for my top-10 movies website.
+- Coded and designed with Python + Flask + WTForms.
+- Data persisted to local SQLite database with SQLAlchemy.
+- HTTP GET requests from TMDB API.
+- Interactive and animated website with Bootstrap.
