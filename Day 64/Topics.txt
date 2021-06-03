@@ -31,14 +31,13 @@ Requirements / Steps:
       
    c. Make the code work so that each entry in the database is displayed correctly on the front and back of the card on the home page. ✅
    
-2. Edit a movie's rating and reviews. ✅
-   a. Use WTForms to create the RateMovieForm. 
+2. Edit a movie's rating and reviews. 
+   a. Use WTForms to create the RateMovieForm. ✅
       Use this to create a Quick Form to be rendered in edit.html.
       
    b. Once the form is submitted and validated, add the updates to the corresponding movie entry in the database. ✅
    
 3. Delete movies from the database.
-
    a. Delete the movie from the database using the 'Delete' button on the back of each movie card. ✅
 
 4. Add new movies via the Add page.
