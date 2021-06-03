@@ -1,0 +1,37 @@
+Project: Build a website for our top-10 movies of all time using Flask + WTForms + Bootstrap + SQLite + SQLAlchemy.
+
+Lessons: 
+1. In Flask, only if you put a parameter in your decorator url like @app.route('/books/<somevariable>'), 
+   should you pass some variable to the endpoint function as an argument and write: def myfunction(somevariable):
+
+2. 
+
+Requirements / Steps:
+0. Download the starting files and install all required packages.
+
+1. View movie list items.
+   a. Create an SQLite database with SQLAlchemy. ✅
+      The database needs to contain a "Movie" Table. 
+      This table should contain the following fields:
+      - id 
+      - title 
+      - year 
+      - description 
+      - rating 
+      - ranking
+      - review
+      - img_url
+     
+   b. Using code/DB Viewer, add a new entry to the database. ✅
+      Remove the add entry code from above after running the code once. 
+      Otherwise, you'll get the: sqlalchemy.exc.IntegrityError ...
+      
+   c. Make the code work so that each entry in the database is displayed correctly on the front and back of the card on the home page. ✅
+   
+2. Edit a movie's rating and reviews. ✅
+   a. Use WTForms to create the RateMovieForm. 
+      Use this to create a Quick Form to be rendered in edit.html.
+      
+   b. Once the form is submitted and validated, add the updates to the corresponding movie entry in the database. ✅
+   
+3. Delete movies from the database.
