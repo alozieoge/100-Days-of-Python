@@ -82,7 +82,13 @@ Steps:
    a. Add the DELETE route to /report-closed/<cafe_id> ✅
    b. Return different messages for success, wrong API key and cafe id not found in database. ✅
    
-
+6. Build Documentation for Your API.
+   a. Make sure that all the requests work as you expect. ✅
+   b. Make sure all the requests are saved in the same collection - Cafe & Wifi. ✅ 
+   c. Click on the three dots next to the collection name and go to "View Documentation". 
+      Click "Publish" at the top-right and in the Postman webpage, confirm the settings and click "Complete Pbulication".
+      A link to the documentation is generated. ✅
+   d. Edit index.html to include an anchor tag to our API's documentation. ✅
    
    
    
