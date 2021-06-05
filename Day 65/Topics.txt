@@ -1,0 +1,40 @@
+Topic: Web Design Principles
+
+1. Color Theory
+   - Color Mood
+   - Analogous or Complementary colors
+   - Contrast
+
+2. Typography
+   Font-families: 
+   a. Serif:
+      - Old Style
+      - Transitional
+      - Modern
+      - Slab-Serif
+     
+   b. San-Serif:
+      - Grotesque
+      - Neo-Grotesque
+      - Humanist
+      - Geometric
+      
+   - 2 font styles per design.
+
+3. User Interface (UI) Design
+   - Hierarchy
+   - Layout
+   - Alignment
+   - White space
+   - Audience 
+
+4. User Experience (UX) Design
+   - Simplicity
+   - Consistency
+   - Reading patterns
+   - All-platform design
+   - Don't trick users
+
+Project: Design the website page for 'A Hotel' using canva.com
+
+Design: https://www.canva.com/design/DAEgc8UtE10/so8ETWvufRGNK_hDnAlJMQ/view?website#4:a-hotel
