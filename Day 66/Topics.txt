@@ -1,0 +1,91 @@
+Topic: Build a full API fom scratch using RESTful Routing.
+
+REST - REpresentational State Transfer
+- architectural style for designing APIs
+- by Roy Thomas Fielding (2000) from PhD research
+- proposed set of rules to follow when building APIs
+- promote quick and efficient working with APIs for uniformity.
+
+Project: 
+The starting database consists of a number of cafes to remote-work from. 
+One of the likely use cases of our API, is a developer who wants to serve up a random cafe for their user to go to. 
+
+Objective: Create a /random route that serves up a random cafe.
+
+Tips:
+1. Don't name any of your files or functions 'random'. It will interfere with the random module. Don't ask me how I know 😅
+2. Postman App - The all in one API Testing Tool.
+3. The parameter of the Flask request module to use (args or form) depends on the type of HTTP request being made from the client.
+   a. GET requests: <args>
+      name = request.args.get("name")
+      name_list = request.args.getlist("list_of_items")
+      
+   b. PUT requests: <form>
+      name = request.form.get("name")
+      
+   c. PATCH requests: <args>
+      name = request.args.get("name")
+      
+   d. DELETE requests: <args>
+      name = request.args.get("name")
+      
+4. You can return HTTP error codes with the JSON response
+   - Status OK: 
+        return jsonify(response={"Success": "Successfully completed action ..."}), 200
+   - Status Method Not Allowed: 
+        return jsonify(error={"Key Error": "Sorry, that's not allowed ..."}), 403
+   - Status Not Found:
+        return jsonify(error={"Not Found": "Sorry, .. not found in the database."}), 404
+        
+
+Steps:
+1. HTTP GET - a Random Cafe.
+   a. Create a /random route in main.py that allows GET requests to be made to it. ✅   
+   
+   b. When someone makes a GET request to the /random route, our Flask server should fetch a random cafe from our database. ✅
+   
+   c. Return the result as a JSON object. ✅
+      We've been returning HTML templates using render_template(), but because our server is now acting as an API, we want to return a JSON containing the necessary data. Just like real public APIs.
+      To turn our random_cafe SQLAlchemy Object into a JSON (serialization), we use the Flask serialisation helper method built-in called jsonify().   
+      
+   d. Structure the response by omitting some properties like id. ✅ 
+      Group the Boolean properties into a subsection called amenities.
+      
+   e. Another method of serialising our database row Object to JSON is by first converting it to a dictionary (within the class definiton). 🔰✅
+      Then use jsonify() to convert the dictionary (which is very similar in structure to JSON) to a JSON.
+      
+2. HTTP GET - All the Cafes 
+   a. Create another GET route that's called /all. ✅
+   b. When a GET request is made to this /all route, your server should return all the cafes in your database as a JSON. ✅
+
+3. HTTP GET - Find a Cafe 
+   a. Create a /search route to search for cafes at a particular location. ✅
+      Make our API return all the cafes in a particular area.
+      The user will make a GET request to your /search route and pass the location as a parameter e.g. //.../.../search?loc=Location_Name
+
+   b. Display a different JSON message if the location the user passed as the parameter doesn't exist. ✅
+  
+4. Download, install and setup the Postman app.
+   a. Create a collection for the 'Cafe & Wifi' project. ✅
+   b. Add requests and description for the 3 requests in our API - /all, /random, /search.  ✅
+
+5. HTTP POST - A New Cafe
+   a. Add a new route '/add' with a 'POST' method. ✅
+   b. Create a new Cafe object, populate it's fields with the request.args.get("...") OR request.form.get("...") method and persist to the database. ✅
+   c. Return a success message as a JSON if successful. ✅
+
+6. HTTP PATCH - A Cafe's Coffee Price
+   a. Create a PATCH request route in main.py to handle PATCH requests to our API. ✅
+      For our API to follow RESTful guidelines, the route should be something like this: /update-price/<cafe_id>
+      
+5. HTTP DELETE - A Cafe that's closed
+   a. Add the DELETE route to /report-closed/<cafe_id> ✅
+   b. Return different messages for success, wrong API key and cafe id not found in database. ✅
+   
+
+   
+   
+   
+   
+   
+   
