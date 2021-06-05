@@ -10,8 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# API_KEY = os.environ.get("API_KEY")
-API_KEY = "TopSecretAPIKey"
+API_KEY = os.environ.get("API_KEY")
 
 
 # Cafe TABLE Configuration
@@ -56,7 +55,6 @@ def home():
 @app.route('/random')
 def get_random_cafe():
     all_cafes = db.session.query(Cafe).all()
-    # print(all_cafes)
     random_cafe = random.choice(all_cafes)
 
     # Convert the random_cafe data record to a dictionary of key-value pairs
