@@ -1,0 +1,38 @@
+Topic: Blog Capstone 3 - RESTful Routing
+
+Project: Update my blog by adding HTTP routes to:
+- create new blog posts
+- edit posts
+- delete posts
+
+Tips:
+1. When you make changes in the Jinja2 Templating of an HTML file, stop and re-run the server to see the changes.
+2. 
+
+Lessons:
+1. The data from the CKEditorField is saved as HTML and contains all the structure and styling of the blog post. 
+   In order for this structure to be reflected when you go to the post.html page for the blog post, you need to add a Jinja safe() filter.
+   This makes sure that when Jinja renders the post.html template, it doesn't treat the HTML as text. 
+   To apply a Jinja filter, you need the pipe symbol "|" and this goes between the Jinja expression and Jinja filter. 
+   e.g. {{ Jinja expression | Jinja filter }}
+
+Steps:
+0. Download the starting project files and install required packages.
+
+1. GET a new Blog Post. 
+   a. Read the blog posts from the posts.db database and display them on the Home page. ✅
+   b. Read the selected blog post from the database and display it when selected. ✅
+
+2. POST a new Blog Post. 
+   a. Create a new POST route called /new-post in your Flask server to render the make-post.html page when you click on the "Create New Post" button. ✅
+   b. Use the Flask CKEditor package to make the Blog Content (body) input in the WTForm into a full CKEditor. ✅
+   c. Make the 'Submit Post' button to be blue instead of white. ✅
+      Add a 'button_map' parameter to the wtf quickform and make the 'submit' field a Bootstrap "primary" button.
+        {{ wtf.quick_form(form, novalidate=true, button_map={'submit': 'primary'}) }}
+   d. When the user is done typing out entries to all the fields, the data in the form should be saved as a BlogPost Object into the posts.db  ✅
+      Once the post is saved, redirect the user to the home page and the new post should show up if the saving process was successful.
+   e. The date be automatically calculated using the datetime module in the server. ✅
+      The date needs to be formatted like this: <Month> <Day>, <Year> e.g. August 31, 2019
+   f. In the 'post.html', apply the Jinja filter (safe) to render the HTML styling tags and not treat the HTML as text. ✅
+   
+3. 
