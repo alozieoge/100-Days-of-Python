@@ -7,7 +7,6 @@ Project: Update my blog by adding HTTP routes to:
 
 Tips:
 1. When you make changes in the Jinja2 Templating of an HTML file, stop and re-run the server to see the changes.
-2. 
 
 Lessons:
 1. The data from the CKEditorField is saved as HTML and contains all the structure and styling of the blog post. 
@@ -15,6 +14,9 @@ Lessons:
    This makes sure that when Jinja renders the post.html template, it doesn't treat the HTML as text. 
    To apply a Jinja filter, you need the pipe symbol "|" and this goes between the Jinja expression and Jinja filter. 
    e.g. {{ Jinja expression | Jinja filter }}
+   
+2. HTML forms (WTForms included) do not accept PUT, PATCH or DELETE methods. 
+   So while modifying/updating a databse entry would normally be a PUT request (replacing existing data), because the request is coming from a HTML form, you should instead accept the edited post as a POST request.
 
 Steps:
 0. Download the starting project files and install required packages.
@@ -35,4 +37,19 @@ Steps:
       The date needs to be formatted like this: <Month> <Day>, <Year> e.g. August 31, 2019
    f. In the 'post.html', apply the Jinja filter (safe) to render the HTML styling tags and not treat the HTML as text. ✅
    
-3. 
+3. Edit Existing Blog Posts
+   a. Create a new route /edit-post/<post_id> ✅
+      If the user came from "Create New Post" the <h1> should read "New Post", but if the user came to edit a particular blog post, it should read "Edit Post".
+   b. When you go to make-post.html it should auto-populate the fields in the WTForm with the blog post's data.  ✅
+      The user doesn't have to type out their blog post again. 
+      Do this by passing the post Object's properties when you create the form. ✅
+   c. When the user is done editing in the WTForm, they click "Submit Post", the post should now be updated in the database.  ✅
+      Redirect the user to the post.html page for that blog post.
+   d. HTML and WTForms do not accept PUT, PATCH or DELETE methods.  ✅
+      When the intention is to modify/update the database entry, because the request is coming from a HTML form, you should accept the edited post as a POST request.
+   e. The date field should not be changed, it should represent the original date the post was made. Not the date of the edit. ✅
+
+4. Delete Existing Blog Posts
+   a. In index.html create an anchor tag that just shows a ✘ character next to each post. ✅
+   b. Clicking it should delete the post from the database and redirect the user to the home page. ✅
+      You need to create a DELETE route at the path /delete/<post_id>
