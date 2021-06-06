@@ -1,0 +1,1 @@
+Files for the Blog website project using RESTful API arcihtecture, additional HTTP routes and Flask CKEditor to update / modify blog posts.
