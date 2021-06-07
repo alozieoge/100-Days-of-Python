@@ -17,6 +17,8 @@ Lessons:
    
 2. HTML forms (WTForms included) do not accept PUT, PATCH or DELETE methods. 
    So while modifying/updating a databse entry would normally be a PUT request (replacing existing data), because the request is coming from a HTML form, you should instead accept the edited post as a POST request.
+   
+3. Use flask_moment to work with datetime objects in HTML without need for input from the main.py server.
 
 Steps:
 0. Download the starting project files and install required packages.
@@ -53,3 +55,5 @@ Steps:
    a. In index.html create an anchor tag that just shows a ✘ character next to each post. ✅
    b. Clicking it should delete the post from the database and redirect the user to the home page. ✅
       You need to create a DELETE route at the path /delete/<post_id>
+
+Bonus: Specify the current year in footer.html by adding the flask_moment extension to the Jinja template. ✅
