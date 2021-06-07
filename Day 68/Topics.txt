@@ -9,9 +9,14 @@ Why Authenticate?
 
 4 Levels of Authenication / Encryption
 Level 1: Persisting raw password to database
-Level 2: Encryption with Ciphers
+Level 2: Encryption with Ciphers.
 Level 3: Hashing
 Level 4: Hashing + n-Salting
+
+Resources:
+- cryptii.com
+- The Imitation Game
+- The Enigma machine
 
 Lessons:
 1. Use send_from_directory() to download files from the Flask server.
