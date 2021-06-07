@@ -7,6 +7,12 @@ Why Authenticate?
 1. User activity generates useful user data.
 2. Restrict access to website data depending on their status.
 
+4 Levels of Authenication / Encryption
+Level 1: Persisting raw password to database
+Level 2: Encryption with Ciphers
+Level 3: Hashing
+Level 4: Hashing + n-Salting
+
 Lessons:
 1. Use send_from_directory() to download files from the Flask server.
 
