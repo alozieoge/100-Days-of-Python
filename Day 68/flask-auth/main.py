@@ -10,7 +10,6 @@ app = Flask(__name__)
 SECRET_KEY = os.environ.get('SECRET_KEY')
 app.config['SECRET_KEY'] = SECRET_KEY
 
-app.config['SECRET_KEY'] = 'any-secret-key-you-choose'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
