@@ -1,0 +1,28 @@
+Topic: Authentication with Flask
+
+Project: Reguster, login and logout (authenticate) users with email and password so they can access their private profiles on our website.
+- Allow users download a top secret Flask Programming Cheat Sheet, only after registering /signing up to our website.
+
+Why Authenticate?
+1. User activity generates useful user data.
+2. Restrict access to website data depending on their status.
+
+Lessons:
+1. Use send_from_directory() to download files from the Flask server.
+2. 
+
+
+Steps:
+0. Download starting project and install required packages. ✅
+
+1. Register new users. 
+   a. Take the information the user has inputted in register.html and create a new User object with email, name and password to save into the users.db.  ✅
+   b. After registeration, take them straight to the secrets.html page.  ✅
+   c. The secrets.html page should say "Hello <insert name>". Where the name they typed in the registration form is displayed.  ✅
+   
+2. Downloading files. 
+   a. When the user accesses the secrets.html page, they should be able to download a secret file. ✅
+   b. In the secrets.html page, make the anchor tag make a GET request to your server at the path /download. ✅
+   c. In the download route, use send_from_directory() to download the cheat_sheet.pdf file when the user clicks on the "Download Your File" button. ✅
+
+3. 
