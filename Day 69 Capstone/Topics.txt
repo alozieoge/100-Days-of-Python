@@ -25,6 +25,11 @@ Steps:
    f. Code up the /logout route so that when the user clicks on the LOG OUT button, it logs them out and takes them back to the home page. ✅
 
 3. Protect routes
+   The first registered user will be the admin. They will be able to create new blog posts, edit posts and delete posts
+   a. The first user's id is 1. Use this in index.html and post.html to make sure that only the admin user can see the "Create New Post" and "Edit Post" and Delete buttons. ✅
+   
+   b. Just because a user can't see the buttons, they can still manually access the /edit-post or /new-post or /delete routes. Protect these routes by creating a Python decorator called @admin_only. 
+      If the current_user's id is 1 then they can access those routes, otherwise, they should get a 403 error (not authorised).
 
 4. Create relational databases
 
