@@ -20,9 +20,10 @@ Steps:
 0. Setup your Google Colab
 1. Upload the Data and Read the .csv File.
 2. Preliminary Data Exploration and Data Cleaning with Pandas
-   a. Rows and Columns: .head(), .tail(), .columns
-   b. Missing Data: .findna(), isna()
-   c. Drop Rows with NaN: .dropna()
+   a. Display: .head(), .tail()
+   b. Rows and Columns: .shape, .columns
+   c. Missing Data: .findna(), isna()
+   d. Drop Rows with NaN: .dropna()
 3. Accessing Columns and Individual Cells in a Dataframe
    a. Using [], .loc[], .max(), .min(), .idxmax(), .idxmin()
    b. Nested slicing
