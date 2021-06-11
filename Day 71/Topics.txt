@@ -1,0 +1,32 @@
+Topic: Data Exploration with Pandas
+
+Project: Analyse post-university graduate salaries by major.
+
+Objective: Dig into the data to answer:
+1. Which degrees have the highest starting salaries? 
+2. Which majors have the lowest earnings after college?
+3. Which degrees have the highest earning potential?
+4. What are the lowest risk college majors from an earnings standpoint?
+5. Do business, STEM (Science, Technology, Engineering, Mathematics) or HASS (Humanities, Arts, Social Science) degrees earn more on average?
+
+Lessons:
+1. How to explore a Pandas DataFrame
+2. How to detect NaN (not a number) values and clean your data
+3. How to select particular columns, rows, and individual cells
+4. How to sort your data
+5. How to group data by category
+
+Steps:
+0. Setup your Google Colab
+1. Upload the Data and Read the .csv File.
+2. Preliminary Data Exploration and Data Cleaning with Pandas
+   a. Rows and Columns
+   b. Missing Data
+   c. Drop Rows with NaN
+3. Accessing Columns and Individual Cells in a Dataframe
+   a. Using [], .loc[], .max(), .min(), .idxmax(), .idxmin()
+   b. Nested slicing
+4. Sorting Values & Adding Columns Majors with the Most Potential vs Lowest Risk
+   a. .subtract(), .insert()
+   b. .sort_values()
+
