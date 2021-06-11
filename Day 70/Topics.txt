@@ -1,0 +1,20 @@
+Topic: Deploying a webapp with Digital Ocean
+
+Lessons:
+1. Version control with Git
+2. Pushing repositories to GitHub
+
+To Learn:
+1. Hosting a website with Heroku and gunicorn
+2. Upgrade database from SQLite to PostgreSQL
+
+Steps:
+0. Download the starting website files. 
+
+1. Upload Your Project to GitHub. 
+
+2. Use gunicorn and Heroku to host your website. 
+
+3. Setup a WSGI server with gunicorn. 
+
+4. Upgrade SQLite Database to PostgreSQL.
