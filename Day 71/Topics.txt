@@ -20,13 +20,16 @@ Steps:
 0. Setup your Google Colab
 1. Upload the Data and Read the .csv File.
 2. Preliminary Data Exploration and Data Cleaning with Pandas
-   a. Rows and Columns
-   b. Missing Data
-   c. Drop Rows with NaN
+   a. Rows and Columns: .head(), .tail(), .columns
+   b. Missing Data: .findna(), isna()
+   c. Drop Rows with NaN: .dropna()
 3. Accessing Columns and Individual Cells in a Dataframe
    a. Using [], .loc[], .max(), .min(), .idxmax(), .idxmin()
    b. Nested slicing
 4. Sorting Values & Adding Columns Majors with the Most Potential vs Lowest Risk
    a. .subtract(), .insert()
-   b. .sort_values()
-
+   b. .sort_values() in ascending or descending order
+5. Grouping and Pivoting Data with Pandas
+   a. .groupby() allows us to manipulate data similar to a Microsoft Excel Pivot Table.
+   b. Change Pandas display of decimal places:
+         pd.options.display.float_format = '{:,.2f}'.format
