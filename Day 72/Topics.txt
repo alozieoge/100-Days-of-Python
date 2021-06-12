@@ -2,6 +2,8 @@ Topic: Data Visualization with Matplotlib
 
 Project: Analyse the Popularity of Different Programming Languages over Time
 
+Notebook: Google Drive - Day 72 / Programming_Languages_(start).ipynb
+
 Lessons:
 1. How to visualise your data and create charts with Matplotlib
 2. How to pivot, group and manipulate your data with Pandas to get it into the format you want
@@ -47,4 +49,26 @@ Steps:
    e. Count the number of entries per column.
         
 4. Data Visualisation with Matplotlib
-   a. 
+   a. Import pyplot
+        import matplotlib.pyplot as plt
+   b. Plot chart
+        plt.plot(df.index, df['java'])
+   c. Styling the chart
+        .figure() - allows us to resize the chart
+        .xticks() - configures the x-axis - fontsize, 
+        .yticks() - configures the y-axis
+        .xlabel() - add text to the x-axis - xlabel, fontsize
+        .ylabel() - add text to the y-axis - ylabel, fontsize
+        .ylim() - set a lower and upper bound
+        .legend() - add legend to chart
+   d. Plot all columns in a DataFrame using a for-loop
+        for column in df.columns:
+           plt.plot(df.index, df[column], label=column)
+           # OR
+           plt.plot(df.index, df[column], label=df[column].name)
+      
+5. Smoothing out Time-Series Data
+   a. Rolling average
+       roll_df = df.rolling(window=6).mean()
+       
+   
