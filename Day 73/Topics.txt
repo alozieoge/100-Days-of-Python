@@ -1,0 +1,60 @@
+Topic: Aggregate and Merge Data in Pandas
+
+Project: Analyse a dataset of LEGO prices
+
+Lessons:
+1. Combine a Notebook with HTML Markup.
+2. Apply List slicing techniques to Pandas DataFrames.
+3. Aaggregate data using the .agg() function.
+4. Create scatter plots, bar charts, and line charts with two axes in Matplotlib.
+5. Understand database schemas that are organised by primary and foreign keys.
+6. Merge DataFrames that share a common key.
+
+Steps:
+0. Upload and setup notebook. 
+
+1. Use HTML Markdown to prettify notebook.
+   a. To add image to Text field:
+        <img src='https://...'>
+   b. To add section headings:
+        # ... <h1>
+        ## ... <h2>
+        ### ... <h3>
+        #### ... <h4>
+        ##### ... <h5>
+
+2. Data Exploration - Unique Colors
+   a. To get number of unique items in all columns:
+        df.nunique(axis=0)
+   b. To get the number of values per category:
+        df.groupby('is_trans').count()
+        # OR
+        df['is_trans'].value_counts()
+
+3. Data Exploration - Number of Sets
+   a. To sort the dataFrame by a column:
+        df.sort_values(by='year', ascending=True)
+   b. To filter a dataFrame by a column value:
+        df[df['year']==1949]
+        
+4. Visualise the Number of Sets Published over Time
+   a. Get the number of parts produced by year. 
+        df.groupby('year').count()
+   b. Make a new dataFrame where index=year and values=num_parts
+        new_df = pd.DataFrame(df.groupby('year').count()['num_parts']
+   c. Plot the number of parts over time
+        plt.plot(new_df.index, new_df.num_parts)
+   d. You can slice a dataFrame like a Python list or just slice the column series.
+        df[:-2]
+        # OR
+        df['num_parts'][:-2]
+        
+5. Aggregate a dataFrame with the .agg() function
+   a. agg() function:
+        .agg({'column1': operation1, 'column2': operation2, ...})
+   b. To get the number of unique themes per year:
+        df.groupby('year').agg({'theme_id': pd.Series.nunique})
+   c. To rename a dataFrame column:
+        df.rename(columns={'theme_id': ''num_theme'}, inplace=True)
+    
+ 6. Superimposing Line Charts with Separate Axes
