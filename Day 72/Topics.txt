@@ -1,0 +1,50 @@
+Topic: Data Visualization with Matplotlib
+
+Project: Analyse the Popularity of Different Programming Languages over Time
+
+Lessons:
+1. How to visualise your data and create charts with Matplotlib
+2. How to pivot, group and manipulate your data with Pandas to get it into the format you want
+3. How to work with timestamps and time-series data
+4. How to style and customise a line chart to your liking
+
+Steps:
+0. Notebook setup and data exploration
+   a. Read the .csv file and store it in a Pandas DataFrame called df. Provide these column names: ['DATE', 'TAG', 'POSTS']
+   b. Look at the first and last 5 rows of the DataFrame.
+   c. How many rows and how many columns does it have?
+   d. Count the number of entries in each column.
+   
+1. Challenge
+   a. Given that the TAG serves is the category column, count the number of posts per language? 
+        df.groupby('TAG').sum()
+      Which programming language had the most number of posts since the creation of Stack Overflow?
+        df.groupby('TAG')['POSTS'].idxmax()
+   b. Count how many months of posts exist for each programming language?
+        df.groupby('TAG').count()
+        
+2. Data Cleaning - Time Stamps
+   a. Convert string dates to datetime objects (Pandas Timestamp) with:
+        pd.to_datetime(df['DATE'])
+
+3. Data Manipulation - Pivoting DataFrames
+   a. df.pivot(index='Age', columns='Actor', values='Power')
+        index = categories for the row.
+        columns = categories for the column
+        values = what you want in the cells.
+        If there's no value for a cell, then it becomes NaN by default.
+        
+   b. Dealing with NaN
+        df.fillna(0, inplace=True)
+      Check if there's any NaN in the DataFrame
+        df.isna().values.any()
+        
+3.1 Challenge        
+   a. Pivot the df DataFrame so that each row is a date and each column is a programming language? 
+   b. Examine the dimensions of the reshaped DataFrame. How many rows does it have? How many columns?
+   c. Examine the head and the tail of the DataFrame.
+   d. Print out the column names.
+   e. Count the number of entries per column.
+        
+4. Data Visualisation with Matplotlib
+   a. 
