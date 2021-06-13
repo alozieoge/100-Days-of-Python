@@ -59,23 +59,29 @@ Steps:
    c. To rename a dataFrame column:
         df.rename(columns={'theme_id': ''num_theme'}, inplace=True)
     
- 6. Superimposing Line Charts with Separate Axes
-    a. To plot lines on 2 separate y-axes, get the first axes object and create a second axes that shares the same x-axes as the first.
-         ax1 = plt.gca()
-         ax2 = ax1.twinx()
-    b. Plot using the axes instead of plt
-         ax1.plot(..., color='b')
-         ax2.plot(..., color='g')
- 
- 7. a. Scatter plot
-         plt.scatter(x=..., y=...)
- 
- 8. Relational Database Schemas - Primary and Foreign Keys
-    a. DB Schema is how the database is organised, by tables and keys.
-    b. Relational database tables can be linked by primary and foreign keys.
-       Primary key = Unique id in table
-       Foreign key = id in another table that can have repeated use.
-       
- 9. Merge DataFrames and Create Bar Charts
-    a. 
-       
+6. Superimposing Line Charts with Separate Axes
+   a. To plot lines on 2 separate y-axes, get the first axes object and create a second axes that shares the same x-axes as the first.
+        ax1 = plt.gca()
+        ax2 = ax1.twinx()
+   b. Plot using the axes instead of plt
+        ax1.plot(..., color='b')
+        ax2.plot(..., color='g')
+
+7. a. Scatter plot
+        plt.scatter(x=..., y=...)
+
+8. Relational Database Schemas - Primary and Foreign Keys
+   a. DB Schema is how the database is organised, by tables and keys.
+   b. Relational database tables can be linked by primary and foreign keys.
+      Primary key = Unique id in table
+      Foreign key = id in another table that can have repeated use.
+      
+9. Merge DataFrames
+   a. You can create a Pandas DataFrame from another DataFrame or Series, using a Python dictionary.
+        df = pd.DataFrame({'id': df0.index, 'column1': df0.values})
+   b. To be able to merge, 2 DataFrames must have a column with the same name.
+        merged_df = pd.merge(left=df1, right=df2, on='column_name')
+        
+10. Creating bar charts
+    a. plt.bar(x=df['name'], y=df['set_count'])
+       plt.xticks(fontsize=14, rotation=45)
