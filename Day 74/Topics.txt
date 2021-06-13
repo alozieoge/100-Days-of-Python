@@ -48,5 +48,32 @@ Steps:
         from pandas.plotting import register_matplotlib_converters
         register_matplotlib_converters()
         
- 4. 
+4. Using Locators and DateFormatters to generate Tick Marks on a Time Line
+   a. Locator helpers allow to add and format major and minor tick marks, especially on a time axis.
+      Import and instantiate the matplotlib locator helpers.
+        import matplotlib.dates as mdates
+        years = mdates.YearLocator()
+        months = mdates.MonthLocator()
+        years_fmt = mdates.DateFormatter('%Y')
+        
+   b. Set the axis major and minor locator and formatter.
+        ax1.xaxis.set_major_locator(years)
+        ax1.xaxis.set_major_formatter(years_fmt)
+        ax1.xaxis.set_minor_locator(months)
+        
+5. Data Visualization - Line Style and Markers        
+   a. Add markers, linewidth, linestyle arguments to the plot() function
+   b. Set the limit of an axis
+        ax1.set_ylim(bottom=0, top=15000)
+        
+6. Data Visualisation - Unemployment How to use Grids
+   a. Enable and set grids for an axis:
+        ax1.grid(color='grey', linestyle='--')
+   b. Rolling average on a dataFrame or its columns
+        roll_df = df[['Col1', 'Col2']].rolling(window=6).mean()
+   
+7. Data Visualisation - Unemployment The Effect of New Data
+   a. Unemployment levels in 2020 dwarf 2008 financial crisis levels, because of COVID-19.
+        
+        
 
