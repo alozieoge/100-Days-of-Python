@@ -2,6 +2,8 @@ Topic: Beautiful Plotly Charts + Analysing the Android App Store Data.
 
 Project: Comprehensive analysis of the Android app market by comparing thousands of apps in Google Play store.
 
+Notebook: Google Drive / Day 75 / Google Play Store App Analytics (start).ipynb
+
 Lessons:
 1. Quickly remove duplicates
 2. Remove unwanted symbols and convert data into a numeric format
@@ -54,3 +56,23 @@ Steps:
         df['result'] = df['col1'] * df['col2']
         
 5. Plotly Bar Charts & Scatter Plots - The Most Competitive & Popular App Categories
+   a. Plot a bar chart with Plotly
+        fig = px.bar(x=category_df.index, y=category_df.values)
+        fig.show()
+   b. To get the number of installations per category:
+        category_installs = df.groupby('Category').agg({'Installs': pd.Series.sum})
+   c. Scatter plot:
+        scatter = px.scatter(df, x=df.x_col, y=df.y_col, size='x', color='y', hover_name=df.index, title='..')
+        scatter.show()
+   d. Update the scatter plot layout to plot the y-axis in log-scale:
+        scatter.update_layout(xaxis_title='..', yaxis_title='..', yaxis=dict(type='log)))
+        
+6. Extracting Nested Column Data using .stack()
+   a. The stack is series that contains the unique categories from the multi-category column cell values. 
+        stack = df['multi_category_col'].str.split(';').stack()
+   b. Get the count of each unique element in the stack:
+        num_category = stack.value_counts()
+        
+7. Grouped Bar Charts and Box Plots with Plotly
+   a. 
+      
