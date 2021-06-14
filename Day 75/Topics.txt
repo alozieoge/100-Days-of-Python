@@ -74,5 +74,6 @@ Steps:
         num_category = stack.value_counts()
         
 7. Grouped Bar Charts and Box Plots with Plotly
-   a. 
+   a. To groupby 2 or more columns, 1 after the other:
+        df.groupby(['col1', 'col2', ..])
       
