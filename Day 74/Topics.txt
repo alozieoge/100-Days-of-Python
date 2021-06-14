@@ -1,0 +1,79 @@
+Topic: Data Resampling and Visualizing Time Series
+
+Project: Combine Google Search Trends with other Time Series Data
+
+Notebook: Google Drive / Day 74 / Google Trends and Data Visualization (start).ipynb
+
+Tips: 
+1. To repair a corrupted .zip or .rar file in Winzip:
+   - In Winzip, select corrupted file.
+   - Go to Tools menu -> Repair archive (Alt + R).
+   
+2. When plotting a chart with secondary axis, always set the pyplot (plt) parameters first before ax1 = plt.gca() and ax2 = ax1.twinx().
+
+
+Lessons:
+1. Make time-series data comparable by resampling and converting to the same periodicity (e.g., from daily data to monthly data).
+2. Fine-tuning the styling of Matplotlib charts by using limits, labels, linestyles, markers, colours, and the chart's resolution.
+3. Using grids to help visually identify seasonality in a time series.
+4. Finding the number of missing and NaN values and how to locate NaN values in a DataFrame.
+5. How to work with Locators to better style the time axis on a chart.
+6. Review the Data Science concepts learned and apply them to new datasets.
+
+Steps:
+0. Upload and setup starting Colab Notebook.
+
+1. Data Exploration - Making Sense of Google Search Data
+   a. To get a summary descriptive statistics of the dataFrame:
+      df.describe()
+   b. Google Trends numbers range between 0 and 100, and represent the search popularity relative the most popular search term in a given region and time.
+   
+2. Data Cleaning - Resampling Time Series Data
+   a. To find if missing values exist
+        df.isna().values.any()
+   b. To get number of missing values / cells
+        df.isna().values.sum()
+   c. To remove rows containing missing values
+        df.dropna(inplace=True)
+   d. Convert string to DateTime (datetime64[ns]) objects
+        df['DATE'] = pd.to_datetime(df['DATE'])
+   e. To resample time series dataFrame
+        df_monthly = df.resample('M', on='DATE').last()  # Use last data in the month
+        df_monthly = df.resample('M', on='DATE').mean()  # Use mean of data in the month
+
+3. Data Visualisation - Tesla Line Charts in Matplotlib
+   a. To set the tick label properties, specify the values to plt.xticks() before gca().
+        plt.xticks(fontsize=14, rotation=45)
+   b. Register a datetime converter to prevent matrplotlib warning about using implicit datetime converter when plotting datetime objects:
+        from pandas.plotting import register_matplotlib_converters
+        register_matplotlib_converters()
+        
+4. Using Locators and DateFormatters to generate Tick Marks on a Time Line
+   a. Locator helpers allow to add and format major and minor tick marks, especially on a time axis.
+      Import and instantiate the matplotlib locator helpers.
+        import matplotlib.dates as mdates
+        years = mdates.YearLocator()
+        months = mdates.MonthLocator()
+        years_fmt = mdates.DateFormatter('%Y')
+        
+   b. Set the axis major and minor locator and formatter.
+        ax1.xaxis.set_major_locator(years)
+        ax1.xaxis.set_major_formatter(years_fmt)
+        ax1.xaxis.set_minor_locator(months)
+        
+5. Data Visualization - Line Style and Markers        
+   a. Add markers, linewidth, linestyle arguments to the plot() function
+   b. Set the limit of an axis
+        ax1.set_ylim(bottom=0, top=15000)
+        
+6. Data Visualisation - Unemployment How to use Grids
+   a. Enable and set grids for an axis:
+        ax1.grid(color='grey', linestyle='--')
+   b. Rolling average on a dataFrame or its columns
+        roll_df = df[['Col1', 'Col2']].rolling(window=6).mean()
+   
+7. Data Visualisation - Unemployment The Effect of New Data
+   a. Unemployment levels in 2020 dwarf 2008 financial crisis levels, because of COVID-19.
+        
+        
+
