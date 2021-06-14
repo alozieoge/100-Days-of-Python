@@ -1,0 +1,56 @@
+Topic: Beautiful Plotly Charts + Analysing the Android App Store Data.
+
+Project: Comprehensive analysis of the Android app market by comparing thousands of apps in Google Play store.
+
+Lessons:
+1. Quickly remove duplicates
+2. Remove unwanted symbols and convert data into a numeric format
+3. Wrangle columns containing nested data with Pandas
+4. Create compelling data visualisations with the plotly library
+5. Create vertical, horizontal and grouped bar charts
+6. Create pie and donut charts for categorical data
+7. Use colour scales to make beautiful scatter plots
+
+Steps:
+0. Upload and setup the starting notebook and data file.
+
+1. Preliminary Data Exploration
+   a. Get a random sub-sample of the dataFrame.
+        df.sample(5)
+
+2. Data Cleaning
+   a. Remove unused columns from the dataFrame:
+        df.drop(columns=['col1', 'col2'], axis=1, inplace=True)
+   b. Count how many NaNs in acolumn
+        df.isna()['Rating'].values.sum()
+        # or
+        df[df['Rating'].isna()]
+   c. Drop rows with NaN in a particular column
+        df_clean = df.dropna(subset=['Rating'])
+   d. To sort a dataFrame by a column
+        df.sort_values(by='Rating', ascending=False)
+
+3. Data Visualisation with Plotly - Create Pie and Donut Charts
+   a. Get the number of occurrences of a category in a column
+        rating = df['Content_Rating'].value_counts()   
+   b. Import a plotly class object:
+        import plotly.express as px
+   c. Create a pie chart
+        fig = px.pie()
+        fig.show(labels=rating.index, values=rating.values)
+   d. Use the update_traces() method to configure other parameters not in the pie() method.
+        fig.update_traces(textposition='outside')
+   
+4. Numeric Type Conversions
+   a. To replace a character in a string object in a dataFrame:
+        df['col1'] = df['col1'].str.replace(',', '')
+   b. To convert a str object to number:
+        df['col1'] = pd.to_numeric(df['col1'])
+   c. To get the datatype of all the columns:
+        df.info()
+   d. To multiply dataFrame columns
+        df['result'] = df['col1'].mul(df['col2'])
+        # or
+        df['result'] = df['col1'] * df['col2']
+        
+5. Plotly Bar Charts & Scatter Plots - The Most Competitive & Popular App Categories
