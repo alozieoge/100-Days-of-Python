@@ -1,7 +1,5 @@
 Topic: Computation with NumPy and N-Dimensional Arrays
 
-Project:
-
 Notebook: Google Drive / Day 76 / Computation_with_Numpy_and_N_Dimensional_Arrays_(start).ipynb
 
 Lessons:
@@ -38,4 +36,16 @@ Steps:
       Condition: a1.shape[1] = b1.shape[0]
 
 4. Manipulating Images as ndarrays
-   a. 
+   a. Packages to work with images
+        import matplotlib.pyplot as plt
+        from PIL import Image
+        
+   b. To convert a color image to greyscale, multiple the sRGB of the image by grey:
+         sRGB = RGB / 255
+         grey_array = 0.2126*Red + 0.71152*Green + 0.0722*Blue
+         grey_image = sRGB * grey_array
+         
+   c. To read an image file:
+        plt.imread('image.png')
+        # or
+        img = Image.open('image.jpg')
