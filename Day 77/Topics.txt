@@ -1,0 +1,39 @@
+Topic: Linear Regression and Data Visualization with Seaborn
+
+Notebook: 
+
+Lessons:
+1. Use a popular data visualisation library called Seaborn 
+2. Run and interpret a linear regression with scikit-learn
+3. Plot a regression a scatter plot to visualise relationships in the data
+4. Add a third dimension to a scatter plot to create a bubble chart
+5. Use floor division // to convert your data
+
+Tools:
+1. Seaborn
+2. Scikit-Learn
+
+Steps:
+0. Upload and setup the starting notebook. 
+
+1. Explore and clean the movie budget data.
+   a. Get descriptive stats
+   b. Replace currency symbols
+   c. Convert strings to numbers
+   d. Movies with zero revenue
+
+2. Filter on Multiple Conditions
+   a. To apply multiple conditions to a dataFrame, use the bitwise operators |, &, ~. 
+      Pandas supports bitwise operations since it is built on NumPy.
+        df.loc[(df[col1]!= 0) & (df[col2]=0)]
+   b. Also use the df.query() method
+        df.query(expr='col1 != 0 and col2 == 0')
+
+3. Visualizing Data with Seaborn
+   a. Importing seaborn
+        import seaborn as sns
+   b. Seaborn is built on Matplotlib so reuses some of the functionality.
+      But it also supports plotting from dataFrames.
+        sns.scatter(data=df, x='x-col', y='y-col')
+        sns.plot()
+
