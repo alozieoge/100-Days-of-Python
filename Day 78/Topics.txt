@@ -1,0 +1,21 @@
+Topic: Analysing the Nobel Prize with PLotly, Matplotlib and Seaborn
+
+Project: Analyse dataset on past Nobel Prize winners.
+
+Notebook: Google Drive / Day 78 / 
+
+Lessons:
+1. Create a Choropleth to display data on a map.
+2. Create bar charts showing different segments of the data with plotly.
+3. Create Sunburst charts with plotly.
+4. Use Seaborn's .lmplot() and show best-fit lines across multiple categories using the row, hue, and lowess parameters.
+5. Understand how a different picture emerges when looking at the same data in different ways (e.g., box plots vs a time series analysis).
+6. See the distribution of our data and visualise descriptive statistics with the help of a histogram in Seaborn.
+
+Steps:
+0. Upload and setup the starting notebook.
+
+1. Update Packages in Google Colab & Explore and Clean the Dataset. 
+   a. To upgrade a package:
+        %pip install --upgrade plotly
+    
