@@ -33,6 +33,9 @@ Lessons:
 1. Bootstrap atribute and class for visually-impaired accessibility:
     - aria-hidden = true / false;
     - class="sr-only" - specifies the name of the HTML tag/element to be read out.
+    
+    
+2. 
 
 
 
