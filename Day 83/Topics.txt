@@ -1,1 +1,1 @@
-Project: Tic-Tac-Toe Game
+Project: Build a Tic-Tac-Toe Game
