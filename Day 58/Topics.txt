@@ -20,9 +20,9 @@ Objective: Style the base HTML template using Bootstrap.
 About Bootstrap
 1. Bootstrap is a front-end library.
 2. It offers:
-   - Responsiveness / adaptability to different viewports. 
+   - Responsiveness / adaptability to different viewports e.g desktop, notepad, mobile. 
    - Pre-styled elements to use in your code. 
-   - Open-source code
+   - Open-source repo hosted on Github.
 
 How to get Bootstrap
 1. Link to CSS stylesheet.
