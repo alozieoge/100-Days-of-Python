@@ -44,5 +44,3 @@ Lessons:
     
     
 2. Stacking Order
-
-3. 
